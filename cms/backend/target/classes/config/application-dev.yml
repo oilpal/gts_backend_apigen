@@ -1,0 +1,98 @@
+# ===================================================================
+# Spring Boot configuration for the "dev" profile.
+#
+# This configuration overrides the application.yml file.
+# ===================================================================
+
+# ===================================================================
+# Standard Spring Boot properties.
+# Full reference is available at:
+# http://docs.spring.io/spring-boot/docs/current/reference/html/common-application-properties.html
+# ===================================================================
+
+logging:
+  level:
+    ROOT: DEBUG
+    io.github.jhipster: DEBUG
+    com.unvus.ihhang: DEBUG
+
+spring:
+  profiles:
+    active: dev
+    include:
+      - swagger
+      # Uncomment to activate TLS for the dev profile
+      # - tls
+  devtools:
+    restart:
+      enabled: true
+    livereload:
+      enabled: false # we use Webpack dev server + BrowserSync for livereload
+  jackson:
+    serialization.indent_output: true
+  session:
+    store-type: redis
+    redis:
+      flush-mode: on_save
+      namespace: dev:gts:cms:ss
+  redis:
+    host: unvus.com
+    port: 16379
+    password: unvus!redis12!@
+  cache:
+    type: redis
+    redis:
+      use-key-prefix: true
+      key-prefix: dev:gts:cms
+  servlet:
+    multipart:
+      max-file-size: 50MB
+      max-request-size: 50MB
+
+
+jhipster:
+  http:
+    version: V_1_1 # To use HTTP/2 you will need to activate TLS (see application-tls.yml)
+  cache: # Cache configuration
+    ehcache: # Ehcache configuration
+      time-to-live-seconds: 3600 # By default objects stay 1 hour in the cache
+      max-entries: 100 # Number of objects in each cache entry
+  # CORS is only enabled by default with the "dev" profile, so BrowserSync can access the API
+  cors:
+    allowed-origins: "*"
+    allowed-methods: "*"
+    allowed-headers: "*"
+    exposed-headers: "Authorization,Link,X-Total-Count"
+    allow-credentials: true
+    max-age: 1800
+
+unvus:
+  security:
+    authentication:
+      # This token must be encoded using Base64 (you can type `echo 'secret-key'|base64` on your command line)
+      base64-secret: ZjQ5Y2Q4NTY3ODczNTRjZjliZjBiMTczZDRhNTBhNWY5NjMyZGY1YjYwYzYxOTk4YTI3NzFmNDk3YzhkNjc3ZmI0NThkNWI2ZWQ3MmY2NjgyN2FlOTg1YjQ1M2NiMGIwYThiNTVlOGY1ZGJjZTUzYTBjMTdmNjY1MWIzMzdhMDk=
+      # Token is valid 24 hours
+      validity-in-seconds: 1800
+      validity-in-seconds-for-remember-me: 2592000
+    remember-me:
+      # security key (this key should be unique for your application, and kept secret)
+      key: 3af516a830ai2k398ae953fd18a4866cea976fa6cdfe2762957ca4e01a550a52ae91ad2df25cb7ca0n354ae6c6e39e3cbefc
+
+application:
+  datasource:
+    default:
+      driver-class-name: com.zaxxer.hikari.HikariDataSource
+      url: jdbc:oracle:thin:@green-care.cfjadohqxgpv.ap-northeast-2.rds.amazonaws.com:1521/ORCL
+      username: admin
+      password: r9wXmGPpDtKatyUk
+      hikari:
+        driverClassName: oracle.jdbc.OracleDriver
+        cachePrepStmts: true
+        prepStmtCacheSize: 250
+        prepStmtCacheSqlLimit: 2048
+        useServerPrepStmts: true
+        idleTimeOut: 180000     # 3*60*1000
+        maxLifetime: 900000     # 15*60*1000
+        minimumIdle: 0
+        maximumPoolSize: 10
+  recaptcha-key: "6LcRCpkUAAAAAIZI3Yc6wAClwBNajZkoJUacJ61m" #localhost 테스트용

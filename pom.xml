@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.neofect</groupId>
+    <artifactId>gts-parent</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+    <packaging>pom</packaging>
+    <name>gts - parent pom</name>
+
+    <distributionManagement>
+        <snapshotRepository>
+            <id>unvus-snapshots</id>
+            <url>https://repo.unvus.com/repository/maven-snapshots</url>
+        </snapshotRepository>
+        <repository>
+            <id>unvus-releases</id>
+            <url>https://repo.unvus.com/repository/maven-releases</url>
+        </repository>
+    </distributionManagement>
+
+    <repositories>
+        <repository>
+            <id>unvus-public</id>
+            <url>https://repo.unvus.com/repository/maven-public</url>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+            <snapshots>
+                <enabled>true</enabled>
+                <updatePolicy>always</updatePolicy>
+            </snapshots>
+        </repository>
+    </repositories>
+
+    <pluginRepositories>
+        <pluginRepository>
+            <id>unvus-public</id>
+            <url>https://repo.unvus.com/repository/maven-public</url>
+        </pluginRepository>
+    </pluginRepositories>
+
+    <prerequisites>
+        <maven>3.0.0</maven>
+    </prerequisites>
+
+    <properties>
+        <dockerfile-maven-plugin.version>1.4.4</dockerfile-maven-plugin.version>
+        <docker.registry.url>registry.unvus.com</docker.registry.url>
+        <docker.image.prefix>neofect</docker.image.prefix>
+
+        <frontend-maven-plugin.version>1.6</frontend-maven-plugin.version>
+        <java.version>1.8</java.version>
+        <encoding>UTF-8</encoding>
+        <maven.compiler.source>${java.version}</maven.compiler.source>
+        <maven.compiler.target>${java.version}</maven.compiler.target>
+        <maven-war-plugin.version>3.2.2</maven-war-plugin.version>
+
+        <sitemesh.version>3.0.1</sitemesh.version>
+        <spring-boot.version>2.0.5.RELEASE</spring-boot.version>
+        <spring-cloud.version>Finchley.SR1</spring-cloud.version>
+
+        <unvus-dependencies.version>1.2.0-SNAPSHOT</unvus-dependencies.version>
+
+        <node.version>v8.12.0</node.version>
+        <npm.version>6.4.1</npm.version>
+        <sqljdbc.version>4.0.2206.100</sqljdbc.version>
+        <oracle-jdbc.version>12.2.0.1</oracle-jdbc.version>
+    </properties>
+
+    <dependencyManagement>
+        <dependencies>
+            <!-- Override version that provided by Spring Boot -->
+
+            <dependency>
+                <groupId>org.sitemesh</groupId>
+                <artifactId>sitemesh</artifactId>
+                <version>${sitemesh.version}</version>
+            </dependency>
+
+			<dependency>
+				<groupId>org.springframework.cloud</groupId>
+				<artifactId>spring-cloud-dependencies</artifactId>
+				<version>${spring-cloud.version}</version>
+				<type>pom</type>
+				<scope>import</scope>
+			</dependency>
+
+            <dependency>
+                <groupId>com.unvus</groupId>
+                <artifactId>unvus-dependencies</artifactId>
+                <version>${unvus-dependencies.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.httpcomponents</groupId>
+                <artifactId>httpclient</artifactId>
+                <version>4.5.2</version>
+            </dependency>
+            <dependency>
+                <groupId>com.oracle.jdbc</groupId>
+                <artifactId>ojdbc8</artifactId>
+                <version>${oracle-jdbc.version}</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+    <dependencies>
+
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+        </dependency>
+
+    </dependencies>
+
+    <modules>
+        <module>core</module>
+        <module>cms</module>
+    </modules>
+
+    <build>
+        <pluginManagement>
+            <plugins>
+            </plugins>
+        </pluginManagement>
+    </build>
+
+    <profiles>
+        <profile>
+            <id>local</id>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
+            <properties>
+                <spring.profile>local</spring.profile>
+                <docker.image.suffix>local</docker.image.suffix>
+            </properties>
+        </profile>
+        <profile>
+            <id>dev</id>
+            <properties>
+                <spring.profile>dev</spring.profile>
+                <docker.image.suffix>dev</docker.image.suffix>
+            </properties>
+        </profile>
+        <profile>
+            <id>prod</id>
+            <properties>
+                <spring.profile>prod</spring.profile>
+                <docker.image.suffix>prod</docker.image.suffix>
+            </properties>
+        </profile>
+    </profiles>
+</project>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        h1 {
+            font-size: 15vmin;
+            margin-bottom: 0;
+        }
+        h2 {
+            font-size: 5vmin;
+            margin-top: 0;
+            margin-bottom: 40px;
+        }
+
+        body {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            background-color: white;
+            align-items: center;
+            justify-content: center;
+            --mouseStartX: -64;
+            --mouseStartY: -64;
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body>
+<h1>403 Forbidden</h1>
+<h2>관리자 페이지는 허용된 IP로만 접속 가능합니다.</h2>
+
+<div style="display:none;">
+    <p th:each="headerName: ${#httpServletRequest.getHeaderNames()}">
+        <span th:text="${headerName}"></span><br/>
+        <span th:text="${#httpServletRequest.getHeader(headerName)}"></span>
+    </p>
+    <p>
+        <span>x-real-ip</span><br/>
+        <span th:text="${#httpServletRequest.getHeader('x-real-ip')}"></span>
+    </p>
+    <p>
+        <span>X-Forwarded-For</span><br/>
+        <span th:text="${#httpServletRequest.getHeader('X-Forwarded-For')}"></span>
+    </p>
+    <p>
+        <span>Proxy-Client-IP</span><br/>
+        <span th:text="${#httpServletRequest.getHeader('Proxy-Client-IP')}"></span>
+    </p>
+    <p>
+        <span>WL-Proxy-Client-IP</span><br/>
+        <span th:text="${#httpServletRequest.getHeader('WL-Proxy-Client-IP')}"></span>
+    </p>
+    <p>
+        <span>HTTP_CLIENT_IP</span><br/>
+        <span th:text="${#httpServletRequest.getHeader('HTTP_CLIENT_IP')}"></span>
+    </p>
+    <p>
+        <span>HTTP_X_FORWARDED_FOR</span><br/>
+        <span th:text="${#httpServletRequest.getHeader('HTTP_X_FORWARDED_FOR')}"></span>
+    </p>
+    <p>
+        <span>get remote addr</span><br/>
+        <span th:text="${#httpServletRequest.getRemoteAddr()}"></span>
+    </p>
+</div>
+</body>
+</html>

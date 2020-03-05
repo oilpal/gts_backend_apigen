@@ -1,0 +1,36 @@
+image: registry.unvus.com/unvus/unvus-build-env
+#image: registry.unvus.com/unvus/unvus-build-env:latest
+#image: cschockaert/docker-npm-maven
+
+variables:
+  DOCKER_DRIVER: overlay
+  DOCKER_HOST: tcp://unvus.com:18082
+
+cache:
+  untracked: true
+  key: "$CI_PROJECT_NAME"
+  paths:
+    - node_modules
+    - target
+
+services:
+  - docker:dind
+
+stages:
+  - deploy
+
+# DEV
+
+deploy-dev-cms:
+  stage: deploy
+  script:
+    - mvn clean deploy -B -e -N
+    - mvn clean deploy -B -e -Dmaven.test.skip=true -Pdev -pl core
+    - mvn clean deploy -B -e -Dmaven.test.skip=true -Pdev -pl cms -amd
+    - docker login -u $DOCKER_REPOSITORY_USERNAME -p $DOCKER_REPOSITORY_PASSWORD $DOCKER_REPOSITORY_URL
+    - docker stack deploy --with-registry-auth --compose-file=docker/docker-compose-dev-cms.yml unvus
+  environment:
+    name: development
+  when: manual
+  only:
+    - master

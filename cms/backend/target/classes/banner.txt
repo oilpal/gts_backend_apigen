@@ -1,0 +1,22 @@
+
+${AnsiColor.DEFAULT}    ____   _____   ____
+${AnsiColor.DEFAULT} U /"___|u|_ " _| / __"| u
+${AnsiColor.DEFAULT} \| |  _ /  | |  <\___ \/
+${AnsiColor.DEFAULT}  | |_| |  /| |\  u___) |
+${AnsiColor.DEFAULT}   \____| u |_|U  |____/>>
+${AnsiColor.DEFAULT}   _)(|_  _// \\_  )(  (__)
+${AnsiColor.DEFAULT}  (__)__)(__) (__)(__)
+
+${AnsiColor.BRIGHT_BLUE}with
+
+${AnsiColor.CYAN}            <-. (`-')_      (`-')            (`-').->
+${AnsiColor.CYAN}      .->      \( OO) )    _(OO )     .->    ( OO)_
+${AnsiColor.CYAN} ,--.(,--.  ,--./ ,--/,--.(_/,-.\,--.(,--.  (_)--\_)
+${AnsiColor.CYAN} |  | |(`-')|   \ |  |\   \ / (_/|  | |(`-')/    _ /
+${AnsiColor.CYAN} |  | |(OO )|  . '|  |)\   /   / |  | |(OO )\_..`--.
+${AnsiColor.CYAN} |  | | |  \|  |\    |_ \     /_)|  | | |  \.-._)   \
+${AnsiColor.CYAN} \  '-'(_ .'|  | \   |\-'\   /   \  '-'(_ .'\       /
+${AnsiColor.CYAN}  `-----'   `--'  `--'    `-'     `-----'    `-----'
+
+${AnsiColor.BRIGHT_BLUE}:: UnvUS 🤓  :: Running Spring Boot ${spring-boot.version} ::
+:: https://www.unvus.com ::${AnsiColor.DEFAULT}

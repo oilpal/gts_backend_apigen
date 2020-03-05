@@ -1,0 +1,4 @@
+attach:
+  directory:
+    tmp-dir: Z:/attach/gts-dev/tmp
+    upload-base-dir: Z:/attach/gts-dev
