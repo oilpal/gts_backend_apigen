@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<skrull xmlns="http://www.unvus.com/schema/skrull" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://www.unvus.com/schema/skrull ../skrull.xsd">
+
+    <entityConfigs>
+        <entityConfig tableName="am_bdgt_drawup" 		subPackage="am" sequenceName=""></entityConfig>
+		<entityConfig tableName="am_calc_acnt" 			subPackage="am" sequenceName=""></entityConfig>
+		<entityConfig tableName="am_calc_kind" 			subPackage="am" sequenceName=""></entityConfig>
+		<entityConfig tableName="am_calc_list" 			subPackage="am" sequenceName=""></entityConfig>
+		<entityConfig tableName="am_code_acnt" 			subPackage="am" sequenceName=""></entityConfig>
+		<entityConfig tableName="am_code_acnt_comp" 	subPackage="am" sequenceName=""></entityConfig>
+		<!--<entityConfig tableName="am_code_acnt_history" 	subPackage="am" sequenceName=""></entityConfig>-->
+		<entityConfig tableName="am_code_acnt_mast" 	subPackage="am" sequenceName=""></entityConfig>
+		<entityConfig tableName="am_code_asset" 		subPackage="am" sequenceName=""></entityConfig>
+		<entityConfig tableName="am_code_bank_comp" 	subPackage="am" sequenceName=""></entityConfig>
+		<entityConfig tableName="am_code_bank_head" 	subPackage="am" sequenceName=""></entityConfig>
+		<entityConfig tableName="am_code_calc_kind" 	subPackage="am" sequenceName=""></entityConfig>
+		<entityConfig tableName="am_code_calc_list" 	subPackage="am" sequenceName=""></entityConfig>
+		<entityConfig tableName="am_code_cd_card" 		subPackage="am" sequenceName=""></entityConfig>
+		<entityConfig tableName="am_code_cd_comp" 		subPackage="am" sequenceName=""></entityConfig>
+		<entityConfig tableName="am_code_cost_center" 	subPackage="am" sequenceName=""></entityConfig>
+		<entityConfig tableName="am_code_cost_kind" 	subPackage="am" sequenceName=""></entityConfig>
+		<entityConfig tableName="am_code_deposit" 		subPackage="am" sequenceName=""></entityConfig>
+		<entityConfig tableName="am_code_dept" 			subPackage="am" sequenceName=""></entityConfig>
+		<entityConfig tableName="am_code_etc" 			subPackage="am" sequenceName=""></entityConfig>
+		<entityConfig tableName="am_code_evidence" 		subPackage="am" sequenceName=""></entityConfig>
+		<entityConfig tableName="am_code_income" 		subPackage="am" sequenceName=""></entityConfig>
+		<entityConfig tableName="am_code_item_asst" 	subPackage="am" sequenceName=""></entityConfig>
+		<entityConfig tableName="am_code_kind" 			subPackage="am" sequenceName=""></entityConfig>
+		<entityConfig tableName="am_code_project" 		subPackage="am" sequenceName=""></entityConfig>
+		<entityConfig tableName="am_code_rate" 			subPackage="am" sequenceName=""></entityConfig>
+		<entityConfig tableName="am_code_slip_kind" 	subPackage="am" sequenceName=""></entityConfig>
+		<entityConfig tableName="am_code_sour_div" 		subPackage="am" sequenceName=""></entityConfig>
+		<entityConfig tableName="am_code_tax_office" 	subPackage="am" sequenceName=""></entityConfig>
+		<entityConfig tableName="am_code_taxcomp" 		subPackage="am" sequenceName=""></entityConfig>
+		<entityConfig tableName="am_code_taxcomp_etc" 	subPackage="am" sequenceName=""></entityConfig>
+		<entityConfig tableName="am_code_valid_mast" 	subPackage="am" sequenceName=""></entityConfig>
+		<entityConfig tableName="am_code_validation" 	subPackage="am" sequenceName=""></entityConfig>
+
+		<entityConfig tableName="estorder_detail" 	subPackage="estorder" sequenceName=""></entityConfig>
+		<entityConfig tableName="estorder_main" 	subPackage="estorder" sequenceName=""></entityConfig>
+
+		<entityConfig tableName="form_contract" 		subPackage="form" sequenceName=""></entityConfig>
+		<entityConfig tableName="form_contract_plan" 	subPackage="form" sequenceName=""></entityConfig>
+		<entityConfig tableName="form_contract_text" 	subPackage="form" sequenceName=""></entityConfig>
+
+		<entityConfig tableName="gs_slip_acnt" 			subPackage="gs" sequenceName=""></entityConfig>
+
+		<entityConfig tableName="incentive_receipt" 	subPackage="gs" sequenceName=""></entityConfig>
+
+		<entityConfig tableName="lease_contract" 	subPackage="lease" sequenceName=""></entityConfig>
+
+		<!--<entityConfig tableName="hr_code_ref" 			subPackage="hr" sequenceName=""></entityConfig>-->
+<!--		<entityConfig tableName="hr_pers_master" 		subPackage="hr" sequenceName=""></entityConfig>-->
+
+		<entityConfig tableName="member_clock" 			subPackage="member" sequenceName=""></entityConfig>
+		<entityConfig tableName="member_pay" 			subPackage="member" sequenceName=""></entityConfig>
+		<entityConfig tableName="member_pay_src" 		subPackage="member" sequenceName=""></entityConfig>
+		<entityConfig tableName="member_payment" 		subPackage="member" sequenceName=""></entityConfig>
+		<entityConfig tableName="member_vacation" 		subPackage="member" sequenceName=""></entityConfig>
+		<entityConfig tableName="member_vacation_date" 	subPackage="member" sequenceName=""></entityConfig>
+
+		<!--<entityConfig tableName="mg_change_dept_id" 	subPackage="mg" sequenceName=""></entityConfig>-->
+		<!--<entityConfig tableName="mg_employee" 			subPackage="mg" sequenceName=""></entityConfig>-->
+		<!--<entityConfig tableName="mg_employee_dept" 		subPackage="mg" sequenceName=""></entityConfig>-->
+		<!--<entityConfig tableName="mg_employee_grade" 	subPackage="mg" sequenceName=""></entityConfig>-->
+		<!--<entityConfig tableName="mg_employee_nps" 		subPackage="mg" sequenceName=""></entityConfig>-->
+		<!--<entityConfig tableName="mg_employee_pay" 		subPackage="mg" sequenceName=""></entityConfig>-->
+		<!--<entityConfig tableName="mg_employee_status" 	subPackage="mg" sequenceName=""></entityConfig>-->
+		<!--<entityConfig tableName="mg_employee_status_type" 	subPackage="mg" sequenceName=""></entityConfig>-->
+		<!--<entityConfig tableName="mg_employee_timepay" 	subPackage="mg" sequenceName=""></entityConfig>-->
+		<!--<entityConfig tableName="mg_match_dept" 		subPackage="mg" sequenceName=""></entityConfig>-->
+		<!--<entityConfig tableName="mg_match_receiver" 	subPackage="mg" sequenceName=""></entityConfig>-->
+		<!--<entityConfig tableName="mg_member" 			subPackage="mg" sequenceName=""></entityConfig>-->
+		<!--<entityConfig tableName="mg_member_account" 	subPackage="mg" sequenceName=""></entityConfig>-->
+		<!--<entityConfig tableName="mg_receiver" 			subPackage="mg" sequenceName=""></entityConfig>-->
+		<!--<entityConfig tableName="mg_receiver_dept" 		subPackage="mg" sequenceName=""></entityConfig>-->
+		<!--<entityConfig tableName="mg_receiver_grade" 	subPackage="mg" sequenceName=""></entityConfig>-->
+		<!--<entityConfig tableName="mg_receiver_matching" 	subPackage="mg" sequenceName=""></entityConfig>-->
+		<!--<entityConfig tableName="mg_receiver_protector" 	subPackage="mg" sequenceName=""></entityConfig>-->
+		<!--<entityConfig tableName="mg_receiver_service" 	subPackage="mg" sequenceName=""></entityConfig>-->
+		<!--<entityConfig tableName="mg_request" 			subPackage="mg" sequenceName=""></entityConfig>-->
+		<!--<entityConfig tableName="mg_resolved_service" 	subPackage="mg" sequenceName=""></entityConfig>-->
+		<!--<entityConfig tableName="mg_service" 			subPackage="mg" sequenceName=""></entityConfig>-->
+		<!--<entityConfig tableName="mg_service_dept" 		subPackage="mg" sequenceName=""></entityConfig>-->
+		<!--<entityConfig tableName="mg_service_disabled" 	subPackage="mg" sequenceName=""></entityConfig>-->
+		<!--<entityConfig tableName="mg_service_resolved" 	subPackage="mg" sequenceName=""></entityConfig>-->
+
+		<!--<entityConfig tableName="mr_code_cust" 			subPackage="mr" sequenceName=""></entityConfig>-->
+		<!--<entityConfig tableName="mr_code_custprotector" subPackage="mr" sequenceName=""></entityConfig>-->
+		<!--<entityConfig tableName="mr_code_member" 		subPackage="mr" sequenceName=""></entityConfig>-->
+
+		<!--<entityConfig tableName="nps_raw" 	subPackage="nps" sequenceName=""></entityConfig>-->
+
+		<entityConfig tableName="rent_contract" 	subPackage="rent" sequenceName=""></entityConfig>
+		<entityConfig tableName="rent_req_main" 	subPackage="rent" sequenceName=""></entityConfig>
+
+		<!--<entityConfig tableName="pbcatcol" 	subPackage="pb" sequenceName=""></entityConfig>-->
+		<!--<entityConfig tableName="pbcatedt" 	subPackage="pb" sequenceName=""></entityConfig>-->
+		<!--<entityConfig tableName="pbcatfmt" 	subPackage="pb" sequenceName=""></entityConfig>-->
+		<!--<entityConfig tableName="pbcattbl" 	subPackage="pb" sequenceName=""></entityConfig>-->
+
+		<!--<entityConfig tableName="service_basic_cost" 		subPackage="srvce" sequenceName=""></entityConfig>-->
+		<entityConfig tableName="service_contract" 			subPackage="srvce" sequenceName=""></entityConfig>
+		<entityConfig tableName="service_contract_plan" 	subPackage="srvce" sequenceName=""></entityConfig>
+		<entityConfig tableName="service_pay_receipt" 		subPackage="srvce" sequenceName=""></entityConfig>
+		<entityConfig tableName="service_pay_repay" 		subPackage="srvce" sequenceName=""></entityConfig>
+		<entityConfig tableName="service_pay_sum" 			subPackage="srvce" sequenceName=""></entityConfig>
+		<entityConfig tableName="service_schedule" 			subPackage="srvce" sequenceName=""></entityConfig>
+		<entityConfig tableName="service_summary" 			subPackage="srvce" sequenceName=""></entityConfig>
+		<entityConfig tableName="service_summary_sum" 		subPackage="srvce" sequenceName=""></entityConfig>
+		<entityConfig tableName="service_summary_sum_tot" 	subPackage="srvce" sequenceName=""></entityConfig>
+		<entityConfig tableName="service_supply_schedule" 	subPackage="srvce" sequenceName=""></entityConfig>
+
+		<entityConfig tableName="slip_sale_detail" 	subPackage="slip" sequenceName=""></entityConfig>
+		<entityConfig tableName="slip_simple" 		subPackage="slip" sequenceName=""></entityConfig>
+
+		<entityConfig tableName="sm_auth_act" 			subPackage="sm" sequenceName=""></entityConfig>
+		<entityConfig tableName="sm_auth_act_user" 		subPackage="sm" sequenceName=""></entityConfig>
+		<entityConfig tableName="sm_auth_group" 		subPackage="sm" sequenceName=""></entityConfig>
+		<entityConfig tableName="sm_auth_group_menu" 	subPackage="sm" sequenceName=""></entityConfig>
+		<entityConfig tableName="sm_auth_group_users" 	subPackage="sm" sequenceName=""></entityConfig>
+		<!--<entityConfig tableName="sm_auth_pgmauth_log" 	subPackage="sm" sequenceName=""></entityConfig>-->
+		<entityConfig tableName="sm_auth_pgmcode" 		subPackage="sm" sequenceName=""></entityConfig>
+		<!--<entityConfig tableName="sm_auth_sys" 			subPackage="sm" sequenceName=""></entityConfig>-->
+		<entityConfig tableName="sm_auth_user" 			subPackage="sm" sequenceName=""></entityConfig>
+		<entityConfig tableName="sm_auth_user_group" 	subPackage="sm" sequenceName=""></entityConfig>
+		<entityConfig tableName="sm_auth_user_menu" 	subPackage="sm" sequenceName=""></entityConfig>
+		<entityConfig tableName="sm_auth_user_menu_recent" 	subPackage="sm" sequenceName=""></entityConfig>
+		<!--<entityConfig tableName="sm_board" 				subPackage="sm" sequenceName=""></entityConfig>-->
+		<!--<entityConfig tableName="sm_board_attach" 		subPackage="sm" sequenceName=""></entityConfig>-->
+		<entityConfig tableName="sm_code_calendar" 		subPackage="sm" sequenceName=""></entityConfig>
+		<!--<entityConfig tableName="sm_code_company" 		subPackage="sm" sequenceName=""></entityConfig>-->
+		<entityConfig tableName="sm_code_cust" 			subPackage="sm" sequenceName=""></entityConfig>
+		<!--<entityConfig tableName="sm_code_dept" 			subPackage="sm" sequenceName=""></entityConfig>-->
+		<!--<entityConfig tableName="sm_code_holydate" 		subPackage="sm" sequenceName=""></entityConfig>-->
+		<entityConfig tableName="sm_code_project" 		subPackage="sm" sequenceName=""></entityConfig>
+		<entityConfig tableName="sm_code_zip" 			subPackage="sm" sequenceName=""></entityConfig>
+		<entityConfig tableName="sm_comcode_d" 			subPackage="sm" sequenceName=""></entityConfig>
+		<entityConfig tableName="sm_comcode_h" 			subPackage="sm" sequenceName=""></entityConfig>
+		<entityConfig tableName="sm_comm_file" 			subPackage="sm" sequenceName=""></entityConfig>
+		<!--<entityConfig tableName="sm_comm_file_detail" 	subPackage="sm" sequenceName=""></entityConfig>-->
+		<entityConfig tableName="sm_dev_grid" 			subPackage="sm" sequenceName=""></entityConfig>
+		<entityConfig tableName="sm_dev_grid_cols" 		subPackage="sm" sequenceName=""></entityConfig>
+		<entityConfig tableName="sm_manual" 			subPackage="sm" sequenceName=""></entityConfig>
+		<entityConfig tableName="sm_manual_detail" 		subPackage="sm" sequenceName=""></entityConfig>
+
+		<entityConfig tableName="sum_pl" 		subPackage="sm" sequenceName=""></entityConfig>
+		<entityConfig tableName="sum_mm" 		subPackage="sm" sequenceName=""></entityConfig>
+		<entityConfig tableName="sub_sum" 		subPackage="sm" sequenceName=""></entityConfig>
+
+		<entityConfig tableName="XG_COMTN_LOGINLOG" subPackage="xg" sequenceName=""></entityConfig>
+		<entityConfig tableName="XG_SYS_SVCLOG" 	subPackage="xg" sequenceName=""></entityConfig>
+		<entityConfig tableName="XM_EXCEL_DATA" 	subPackage="xm" sequenceName=""></entityConfig>
+		<entityConfig tableName="Z_AUTH" 			subPackage="zp" sequenceName=""></entityConfig>
+		<entityConfig tableName="Z_COLKORNAME" 		subPackage="zp" sequenceName=""></entityConfig>
+		<entityConfig tableName="Z_DWOCONFIG" 		subPackage="zp" sequenceName=""></entityConfig>
+		<!--<entityConfig tableName="Z_LOG_USER_ACTION" subPackage="zp" sequenceName=""></entityConfig>-->
+		<entityConfig tableName="Z_PGMCODE" 		subPackage="zp" sequenceName=""></entityConfig>
+		<!--<entityConfig tableName="Z_SYSCODE" 		subPackage="zp" sequenceName=""></entityConfig>-->
+		<entityConfig tableName="Z_USER_AUTHORITY" 	subPackage="zp" sequenceName=""></entityConfig>
+		<entityConfig tableName="Z_USER_FAVORITE" 	subPackage="zp" sequenceName=""></entityConfig>
+
+    </entityConfigs>
+    <!-- mvn -Pmetadata,gen generate-sources -->
+    <!-- https://github.com/unvus/skrull -->
+</skrull>

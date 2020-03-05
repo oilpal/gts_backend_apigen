@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<skrull xmlns="http://www.unvus.com/schema/skrull" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://www.unvus.com/schema/skrull ../skrull.xsd">
+
+    <entityConfigs>
+        <entityConfig tableName="code_account_parent"   subPackage="common" sequenceName=""></entityConfig>
+        <entityConfig tableName="code_account"          subPackage="common" sequenceName=""></entityConfig>
+        <entityConfig tableName="code_card"             subPackage="common" sequenceName=""></entityConfig>
+        <entityConfig tableName="code_careamt"          subPackage="common" sequenceName=""></entityConfig>
+        <!--<entityConfig tableName="code_careamt_temp"     subPackage="common" sequenceName=""></entityConfig>-->
+        <entityConfig tableName="code_closing"          subPackage="common" sequenceName=""></entityConfig>
+        <entityConfig tableName="code_comdiv"           subPackage="common" sequenceName=""></entityConfig>
+        <entityConfig tableName="code_comsec"           subPackage="common" sequenceName=""></entityConfig>
+        <entityConfig tableName="code_cust"             subPackage="common" sequenceName=""></entityConfig>
+        <entityConfig tableName="code_cust_excel"       subPackage="common" sequenceName=""></entityConfig>
+        <entityConfig tableName="code_custindept"       subPackage="common" sequenceName=""></entityConfig>
+        <entityConfig tableName="code_custprotector"    subPackage="common" sequenceName=""></entityConfig>
+        <!--<entityConfig tableName="code_dd"               subPackage="common" sequenceName=""></entityConfig>-->
+        <entityConfig tableName="code_depositno"        subPackage="common" sequenceName=""></entityConfig>
+        <entityConfig tableName="code_dept"             subPackage="common" sequenceName=""></entityConfig>
+        <entityConfig tableName="code_dept_authority"   subPackage="common" sequenceName=""></entityConfig>
+        <entityConfig tableName="code_inout_item"       subPackage="common" sequenceName=""></entityConfig>
+        <entityConfig tableName="code_member"           subPackage="common" sequenceName=""></entityConfig>
+        <entityConfig tableName="code_member_excel"     subPackage="common" sequenceName=""></entityConfig>
+        <entityConfig tableName="code_pl"               subPackage="common" sequenceName=""></entityConfig>
+        <entityConfig tableName="code_product"          subPackage="common" sequenceName=""></entityConfig>
+        <entityConfig tableName="code_subul"            subPackage="common" sequenceName=""></entityConfig>
+        <!--<entityConfig tableName="code_taxpay"           subPackage="common" sequenceName=""></entityConfig>-->
+    </entityConfigs>
+    <!-- mvn -Pmetadata,gen generate-sources -->
+    <!-- https://github.com/unvus/skrull -->
+</skrull>

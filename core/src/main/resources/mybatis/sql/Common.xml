@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="Common">
+
+    <sql id="sort">
+        <if test="_orderByList != null">
+            <foreach item="orderBy" index="index" collection="_orderByList" open="ORDER BY " separator=",">
+                <if test="orderBy.orderValue.name().equals('FIELD')">
+                    FIELD(${orderBy.orderKey}
+                    <foreach item="fieldItem" index="index" collection="orderBy.fieldList" open=", " separator="," close=")">
+                        #{fieldItem}
+                    </foreach>
+                </if>
+                <if test="!orderBy.orderValue.name().equals('FIELD')">
+                  ${orderBy.orderKey} ${orderBy.orderValue}
+                </if>
+            </foreach>
+        </if>
+    </sql>
+
+    <sql id="sortKeyList">
+        <if test="_orderByList != null">
+            <foreach item="orderBy" index="index" collection="_orderByList" open=", " separator=",">
+                ${orderBy.orderKey}
+            </foreach>
+        </if>
+    </sql>
+
+    <sql id="sortColumnNameOnly">
+        <if test="_orderByList != null">
+            <foreach item="orderBy" index="index" collection="_orderByList" open="ORDER BY " separator=",">
+            ${orderBy.orderKeyColumnName} ${orderBy.orderValue}
+            </foreach>
+        </if>
+    </sql>
+
+    <sql id="pagingFooter">
+        <if test="USE_PAGING == true and _fromData != null">
+            LIMIT #{_fromData}, #{_dataPerPage}
+        </if>
+    </sql>
+
+    <sql id="bindAlias">
+        <if test="_parameter == null or !(_parameter instanceof java.util.Map) or !(_parameter.containsKey('_alias'))">
+            <bind name="_alias" value="''"></bind>
+        </if>
+    </sql>
+
+    <sql id="bindAsPrefix">
+        <if test="_parameter == null or !(_parameter instanceof java.util.Map) or !(_parameter.containsKey('_asPrefix'))">
+            <bind name="_asPrefix" value="''"></bind>
+        </if>
+    </sql>
+
+
+    <sql id="qm">
+        <if test="_qm != null">
+            <foreach collection="_qm" item="condVal" index="index">
+                <choose>
+                    <when test="condVal instanceof com.unvus.query.QueryBuilder">
+                        <bind name="_qm_1" value="condVal.currQmList" />
+                        ${condVal.andOr}
+                        <trim prefix="(" prefixOverrides="AND|OR" suffix=")">
+                            <include refid="Common.qm_1"></include>
+                        </trim>
+                    </when>
+                    <otherwise>
+                        <include refid="Common.qmLogic">
+                            <property name="condVal" value="condVal"/>
+                        </include>
+                    </otherwise>
+                </choose>
+            </foreach>
+        </if>
+    </sql>
+
+
+    <sql id="qm_1">
+        <if test="_qm_1 != null">
+            <foreach collection="_qm_1" item="condVal" index="index">
+                <choose>
+                    <when test="condVal instanceof com.unvus.query.QueryBuilder">
+                        <bind name="_qm_2" value="condVal.currQmList" />
+                        ${condVal.andOr}
+                        <trim prefix="(" prefixOverrides="AND|OR" suffix=")">
+                            <include refid="Common.qm_2"></include>
+                        </trim>
+                    </when>
+                    <otherwise>
+                        <include refid="Common.qmLogic">
+                            <property name="condVal" value="condVal"/>
+                        </include>
+                    </otherwise>
+                </choose>
+            </foreach>
+        </if>
+    </sql>
+
+
+    <sql id="qm_2">
+        <if test="_qm_2 != null">
+            <foreach collection="_qm_2" item="condVal" index="index">
+                <choose>
+                    <when test="condVal instanceof com.unvus.query.QueryBuilder">
+                    </when>
+                    <otherwise>
+                        <include refid="Common.qmLogic">
+                            <property name="condVal" value="condVal"/>
+                        </include>
+                    </otherwise>
+                </choose>
+            </foreach>
+        </if>
+    </sql>
+
+    <sql id="qmLogic">
+        <if test="condVal != null and condVal.val != null">
+            <choose>
+                <when test="condVal.oper.code == 'in' or condVal.oper.code == 'ni'">
+                    ${condVal.andOr} ${condVal.field.column} ${condVal.oper.symbol} <foreach collection="condVal.val" item="idValue" open="(" close=")" separator=",">#{ idValue }</foreach>
+                </when>
+                <when test="condVal.oper.code == 'lf'">
+                    ${condVal.andOr} ${condVal.field.column} ${condVal.oper.symbol} CONCAT('%', #{condVal.val}, '%')
+                </when>
+                <when test="condVal.oper.code == 'la'">
+                    ${condVal.andOr} ${condVal.field.column} ${condVal.oper.symbol} CONCAT(#{condVal.val}, '%')
+                </when>
+                <when test="condVal.oper.code == 'lb'">
+                    ${condVal.andOr} ${condVal.field.column} ${condVal.oper.symbol} CONCAT('%', #{condVal.val})
+                </when>
+                <otherwise>
+                    ${condVal.andOr} ${condVal.field.column} ${condVal.oper.symbol} #{condVal.val}
+                </otherwise>
+            </choose>
+        </if>
+    </sql>
+
+</mapper>

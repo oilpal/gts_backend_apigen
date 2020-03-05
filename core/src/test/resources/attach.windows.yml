@@ -1,0 +1,28 @@
+attach:
+  directory:
+    tmp-dir: Z:/attach/tmp
+    upload-base-dir: Z:/attach/iflex
+  rooms:
+    -
+      name: user
+      cabs:
+      - default
+    -
+      name: board
+      cabs:
+      - image
+      - attach
+
+  filter-map:
+    resize-w-500:
+      class-name: com.unvus.services.attach.filter.impl.ResizeImageFilter
+      config:
+        maxWith: 500
+    resize-w-600:
+      class-name: com.unvus.services.attach.filter.impl.ResizeImageFilter
+      config:
+        maxWith: 600
+    limit-size-3:
+      class-name: com.unvus.services.attach.filter.impl.MaxSizeExceptionFilter
+      config:
+        maxSize: 3

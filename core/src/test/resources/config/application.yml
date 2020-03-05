@@ -1,0 +1,112 @@
+# ===================================================================
+# Spring Boot configuration for the "dev" profile.
+#
+# This configuration overrides the application.yml file.
+# ===================================================================
+
+# ===================================================================
+# Standard Spring Boot properties.
+# Full reference is available at:
+# http://docs.spring.io/spring-boot/docs/current/reference/html/common-application-properties.html
+# ===================================================================
+
+logging:
+  level:
+    ROOT: DEBUG
+
+spring:
+  profiles:
+    active: dev
+  application:
+    name: inha-test
+  jackson:
+    serialization.indent_output: true
+  redis:
+    host: unvus.com
+    port: 16379
+    password: unvus!redis12!@
+  cache:
+    type: redis
+    redis:
+      use-key-prefix: true
+      key-prefix: dev
+  main:
+    web-application-type: none
+
+jhipster:
+  cache: # Cache configuration
+    ehcache: # Ehcache configuration
+      time-to-live-seconds: 3600 # By default objects stay 1 hour in the cache
+      max-entries: 100 # Number of objects in each cache entry
+
+unvus:
+  app:
+    name: imc-test
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: inha.mailsender@gmail.com
+    password: inhapr!@#
+    startTls: true
+    enableSSL: false
+    auth: true
+    testReceivers: guava.tak@gmail.com
+  format:
+    date-format: yyyy.MM.dd
+    datetime-format: yyyy.MM.dd HH:mm:ss
+  xss:
+    policy-resource: xss/antisamy-unvus.xml
+
+application:
+  datasource:
+    default:
+      driver-class-name: com.zaxxer.hikari.HikariDataSource
+      url: jdbc:mariadb://unvus.com:51101/imcdb?useUnicode=true&characterEncoding=utf8&useSSL=false&allowMultiQueries=true
+      username: imcuser
+      password: imc0102!
+      hikari:
+        driverClassName: org.mariadb.jdbc.Driver
+        cachePrepStmts: true
+        prepStmtCacheSize: 250
+        prepStmtCacheSqlLimit: 2048
+        useServerPrepStmts: true
+        idleTimeOut: 180000     # 3*60*1000
+        maxLifetime: 900000     # 15*60*1000
+        minimumIdle: 0
+        maximumPoolSize: 10
+    legacy:
+      driver-class-name: com.zaxxer.hikari.HikariDataSource
+      url: jdbc:Cache://unvus.com:51102/INHACSP
+      username: wyliejdbc
+      password: qqqq1111!!!!
+      hikari:
+        driverClassName: com.intersys.jdbc.CacheDriver
+        cachePrepStmts: true
+        prepStmtCacheSize: 250
+        prepStmtCacheSqlLimit: 2048
+        useServerPrepStmts: true
+        idleTimeOut: 180000     # 3*60*1000
+        maxLifetime: 900000     # 15*60*1000
+        minimumIdle: 0
+        maximumPoolSize: 1
+    hr:
+      driver-class-name: com.zaxxer.hikari.HikariDataSource
+      url: jdbc:mariadb://unvus.com:51103/imcdb?useUnicode=true&characterEncoding=utf8&useSSL=false&allowMultiQueries=true
+      username: imcuser
+      password: imc0102!
+      hikari:
+        driverClassName: org.mariadb.jdbc.Driver
+        cachePrepStmts: true
+        prepStmtCacheSize: 250
+        prepStmtCacheSqlLimit: 2048
+        useServerPrepStmts: true
+        idleTimeOut: 180000     # 3*60*1000
+        maxLifetime: 900000     # 15*60*1000
+        minimumIdle: 0
+        maximumPoolSize: 10
+
+
+
+
+
+

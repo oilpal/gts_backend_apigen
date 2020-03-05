@@ -1,0 +1,3 @@
+cate_full_path;cate_code;cate_parent_code;cate_type;cate_name;cate_sort_ordr;cate_deleted;cate_created_by;cate_created_dt;cate_modified_by;cate_modified_dt
+CUSTIN|AA;a;시스템;system;356a192b7913b04c54574d18c28d46e6395428ab;1;["ROLE_IMC"];0;-1;2018-09-11 00:00:00;-1;2018-09-11 00:00:00
+CUSTIN|AA;a;관리자;admin;356a192b7913b04c54574d18c28d46e6395428ab;1;["ROLE_IMC"];0;-1;2018-09-11 00:00:00;-1;2018-09-11 00:00:00

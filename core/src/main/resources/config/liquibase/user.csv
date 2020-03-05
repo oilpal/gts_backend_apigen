@@ -1,0 +1,3 @@
+user_id;user_acnt_type;user_name;user_login;user_password;user_activated;user_authority;user_withdraw;user_created_by;user_created_dt;user_modified_by;user_modified_dt;user_deleted
+-1;a;시스템;system;356a192b7913b04c54574d18c28d46e6395428ab;1;["ROLE_IMC"];0;-1;2018-09-11 00:00:00;-1;2018-09-11 00:00:00;0
+1;a;관리자;admin;356a192b7913b04c54574d18c28d46e6395428ab;1;["ROLE_IMC"];0;-1;2018-09-11 00:00:00;-1;2018-09-11 00:00:00;0

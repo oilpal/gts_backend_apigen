@@ -1,0 +1,347 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>com.neofect</groupId>
+        <artifactId>gts-parent</artifactId>
+        <version>0.0.1-SNAPSHOT</version>
+        <relativePath>../pom.xml</relativePath>
+    </parent>
+
+    <artifactId>gts-core</artifactId>
+    <packaging>jar</packaging>
+    <name>gts - core</name>
+
+    <properties>
+        <skrull-maven-plugin.outputDir>${project.basedir}</skrull-maven-plugin.outputDir>
+        <skrull-maven-plugin.version>4.0.24-SNAPSHOT</skrull-maven-plugin.version>
+        <jdbc.oracleRetrieveRemarks>true</jdbc.oracleRetrieveRemarks>
+        <jdbcTableNamePatterns>%</jdbcTableNamePatterns>
+        <jdbc.groupId>com.oracle.jdbc</jdbc.groupId>
+        <jdbc.artifactId>ojdbc8</jdbc.artifactId>
+        <jdbc.version>12.2.0.1</jdbc.version>
+        <jdbc.driver>oracle.jdbc.pool.OracleDataSource</jdbc.driver>
+        <jdbc.user>admin</jdbc.user>
+        <jdbc.password>r9wXmGPpDtKatyUk</jdbc.password>
+        <jdbc.schema>ADMIN</jdbc.schema>
+        <jdbc.url>jdbc:oracle:thin:@green-care.cfjadohqxgpv.ap-northeast-2.rds.amazonaws.com:1521/ORCL</jdbc.url>
+    </properties>
+
+    <repositories>
+        <repository>
+            <id>unvus-public</id>
+            <url>https://repo.unvus.com/repository/maven-public</url>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+            <snapshots>
+                <enabled>true</enabled>
+                <updatePolicy>always</updatePolicy>
+            </snapshots>
+        </repository>
+    </repositories>
+
+    <pluginRepositories>
+        <pluginRepository>
+            <id>unvus-public</id>
+            <url>https://repo.unvus.com/repository/maven-public</url>
+        </pluginRepository>
+    </pluginRepositories>
+
+    <dependencies>
+
+        <dependency>
+            <groupId>com.unvus</groupId>
+            <artifactId>unvus-framework</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-autoconfigure</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-configuration-processor</artifactId>
+            <optional>true</optional>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-aop</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-security</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-jdbc</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-cache</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-mail</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-validation</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-logging</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-redis</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.session</groupId>
+            <artifactId>spring-session-data-redis</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-databind</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.mariadb.jdbc</groupId>
+            <artifactId>mariadb-java-client</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>org.freemarker</groupId>
+            <artifactId>freemarker</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>javax.cache</groupId>
+            <artifactId>cache-api</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.ehcache</groupId>
+            <artifactId>ehcache</artifactId>
+        </dependency>
+
+    </dependencies>
+
+    <!-- 빌드 설정 -->
+    <build>
+        <defaultGoal>install</defaultGoal>
+        <directory>${basedir}/target</directory>
+        <finalName>gts-core-${project.version}</finalName>
+
+        <resources>
+            <resource>
+                <filtering>true</filtering>
+                <directory>src/main/resources</directory>
+                <includes>
+                    <include>**/*.xml</include>
+                </includes>
+                <excludes>
+                    <exclude>**/*.csv</exclude>
+                </excludes>
+            </resource>
+            <resource>
+                <filtering>false</filtering>
+                <directory>src/main/resources</directory>
+                <excludes>
+                    <exclude>**/*.xml</exclude>
+                </excludes>
+            </resource>
+            <resource>
+                <filtering>true</filtering>
+                <directory>${skrull-maven-plugin.outputDir}/src/main/generated-resources</directory>
+            </resource>
+        </resources>
+
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-source-plugin</artifactId>
+                <version>3.0.1</version>
+                <executions>
+                    <execution>
+                        <id>attach-sources</id>
+                        <goals>
+                            <goal>jar</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <!-- http://maven.apache.org/plugins/maven-compiler-plugin/ -->
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.8.0</version>
+                <configuration>
+                    <encoding>UTF-8</encoding>
+                    <source>1.8</source>
+                    <target>1.8</target>
+                    <compilerArgument>-Xlint</compilerArgument>
+                    <showWarnings>true</showWarnings>
+                    <showDeprecation>true</showDeprecation>
+                </configuration>
+            </plugin>
+            <plugin>
+                <!-- http://mojo.codehaus.org/build-helper-maven-plugin/ -->
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>build-helper-maven-plugin</artifactId>
+                <version>3.0.0</version>
+                <executions>
+                    <execution>
+                        <id>Adding generated java folder to build</id>
+                        <phase>generate-sources</phase>
+                        <goals>
+                            <goal>add-source</goal>
+                        </goals>
+                        <configuration>
+                            <sources>
+                                <source>${skrull-maven-plugin.outputDir}/src/main/java</source>
+                                <source>${skrull-maven-plugin.outputDir}/src/main/generated-java</source>
+                            </sources>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+
+    <profiles>
+        <profile>
+            <id>liquibase</id>
+            <build>
+                <defaultGoal>generate-sources</defaultGoal>
+                <plugins>
+                    <plugin>
+                        <groupId>org.liquibase</groupId>
+                        <artifactId>liquibase-maven-plugin</artifactId>
+                        <version>3.5.5</version>
+                        <configuration>
+                            <propertyFile>src/main/resources/config/liquibase/liquibase.properties</propertyFile>
+                            <changeLogFile>src/main/resources/config/liquibase/master.xml</changeLogFile>
+                            <diffChangeLogFile>src/main/resources/config/liquibase/changelog/${maven.build.timestamp}_changelog.xml</diffChangeLogFile>
+                            <driver>org.mariadb.jdbc.Driver</driver>
+                            <url>jdbc:mariadb://unvus.com:3360/iflexdb?useUnicode=true&amp;characterEncoding=utf8</url>
+                            <defaultSchemaName>iflexdb</defaultSchemaName>
+                            <username>iflexuser</username>
+                            <password>iflex0102!</password>
+                            <verbose>true</verbose>
+                            <logging>debug</logging>
+                        </configuration>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+        <profile>
+            <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+            <!-- Extract the database metadata -->
+            <!-- mvn -Pdb,metadata,gen test      -->
+            <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+            <id>metadata</id>
+            <build>
+                <defaultGoal>generate-sources</defaultGoal>
+                <plugins>
+                    <plugin>
+                        <groupId>com.unvus.skrull</groupId>
+                        <artifactId>dbmetadata-maven-plugin</artifactId>
+                        <version>${skrull-maven-plugin.version}</version>
+                        <executions>
+                            <execution>
+                                <id>Extract the database schema.</id>
+                                <goals>
+                                    <goal>extract-metadata</goal>
+                                </goals>
+                                <configuration>
+                                    <jdbcTableNamePatterns><!-- pre-filtering, configurable since 4.0.7, optional, will be % by default -->
+                                        <param>${jdbcTableNamePatterns}</param> <!-- "%" means match any substring of 0 or more characters, and "_" means match any one character -->
+                                    </jdbcTableNamePatterns>
+                                    <jdbcOracleRetrieveRemarks>${jdbc.oracleRetrieveRemarks}</jdbcOracleRetrieveRemarks>
+                                </configuration>
+                            </execution>
+                        </executions>
+                        <dependencies>
+                            <dependency>
+                                <groupId>com.zaxxer</groupId>
+                                <artifactId>HikariCP</artifactId>
+                                <version>2.7.9</version>
+                            </dependency>
+                            <dependency>
+                                <groupId>${jdbc.groupId}</groupId>
+                                <artifactId>${jdbc.artifactId}</artifactId>
+                                <version>${jdbc.version}</version>
+                            </dependency>
+                        </dependencies>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+        <profile>
+            <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+            <!-- Generate the code using Skrull -->
+            <!-- mvn -Pdb,metadata,gen test      -->
+            <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+            <id>gen</id>
+            <build>
+                <defaultGoal>generate-sources</defaultGoal>
+                <plugins>
+                    <plugin>
+                        <groupId>com.unvus.skrull</groupId>
+                        <artifactId>skrull-maven-plugin</artifactId>
+                        <version>${skrull-maven-plugin.version}</version>
+                        <executions>
+                            <execution>
+                                <id>Generates files using the extracted database schema.</id>
+                                <goals>
+                                    <goal>generate</goal>
+                                </goals>
+                            </execution>
+                        </executions>
+                        <dependencies>
+                            <!--<dependency>-->
+                            <!--<groupId>com.unvus.skrull.packs</groupId>-->
+                            <!--<artifactId>pack-backend-jpa</artifactId>-->
+                            <!--<version>1.0.4</version>-->
+                            <!--</dependency>-->
+                            <dependency>
+                                <groupId>com.unvus.skrull.packs</groupId>
+                                <artifactId>skrull-pack-mybatis</artifactId>
+                                <version>1.0.0-SNAPSHOT</version>
+                            </dependency>
+                        </dependencies>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+        <profile>
+            <id>skrull-unvus</id>
+            <properties>
+                <jdbc.user>GTS2016</jdbc.user>
+                <jdbc.password>GTS2016PASS</jdbc.password>
+                <jdbc.schema>GTS2016</jdbc.schema>
+                <jdbc.url>jdbc:oracle:thin:@unvus.com:1523/ORCLPDB1</jdbc.url>
+            </properties>
+        </profile>
+    </profiles>
+</project>

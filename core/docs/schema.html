@@ -1,0 +1,2993 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Report</title>
+    <style type="text/css">
+        .entity{
+            border: solid 1px #7E2828;
+            margin-bottom: 20px;
+        }
+
+        .header{
+            background-color: #7E2828;
+            color: white;
+        }
+
+        .column-header{
+            background-color: #e8d9d0;
+        }
+
+        td{
+            padding-left: 5px;
+            padding-right: 5px;
+        }
+
+        .pwd{
+            background-color: #e83310;
+        }
+
+
+    </style>
+</head>
+<body>
+<table class="entity" cellpadding="0" cellspacing="0">
+    <thead>
+    <tr>
+        <td>영역</td>
+        <td>엔터티명</td>
+        <td>테이블명</td>
+        <td>어트리뷰트명</td>
+        <td>컬럼명</td>
+        <td>컬럼타입</td>
+        <td>Key</td>
+        <td>Unique</td>
+        <td>NULL</td>
+        <td>Default</td>
+        <td>암호화대상</td>
+        <td>비고. 코멘트</td>
+    </tr>
+    </thead>
+    <tbody>
+                        
+            <tr class="column-header">
+                            <td> attach </td>
+                <td> 첨부파일 </td>
+                <td> nv_attach </td>
+                <td>
+                                            파일ID
+                     </td>
+                <td> attach_id </td>
+                <td> BIGINT </td>
+                <td>
+                                            PK
+                     </td>
+                <td> U </td>
+                <td>  </td>
+                <td>  </td>
+                <td >  </td>
+                <td> 파일ID </td>
+            </tr>
+                                <tr>
+                            <td> attach </td>
+                <td> 첨부파일 </td>
+                <td> nv_attach </td>
+                <td>
+                                            참조구분
+                     </td>
+                <td> attach_ref_target </td>
+                <td> VARCHAR(100) </td>
+                <td>
+                     </td>
+                <td>  </td>
+                <td>  </td>
+                <td>  </td>
+                <td >  </td>
+                <td> 참조구분 </td>
+            </tr>
+                                <tr>
+                            <td> attach </td>
+                <td> 첨부파일 </td>
+                <td> nv_attach </td>
+                <td>
+                                            참조구분키
+                     </td>
+                <td> attach_ref_target_key </td>
+                <td> BIGINT </td>
+                <td>
+                     </td>
+                <td>  </td>
+                <td>  </td>
+                <td>  </td>
+                <td >  </td>
+                <td> 참조구분키 </td>
+            </tr>
+                                <tr>
+                            <td> attach </td>
+                <td> 첨부파일 </td>
+                <td> nv_attach </td>
+                <td>
+                                            참조타입
+                     </td>
+                <td> attach_ref_target_type </td>
+                <td> VARCHAR(100) </td>
+                <td>
+                     </td>
+                <td>  </td>
+                <td>  NULL  </td>
+                <td>  </td>
+                <td >  </td>
+                <td> 참조타입 </td>
+            </tr>
+                                <tr>
+                            <td> attach </td>
+                <td> 첨부파일 </td>
+                <td> nv_attach </td>
+                <td>
+                                            표시파일명
+                     </td>
+                <td> attach_display_name </td>
+                <td> VARCHAR(300) </td>
+                <td>
+                     </td>
+                <td>  </td>
+                <td>  NULL  </td>
+                <td>  </td>
+                <td >  </td>
+                <td> 표시파일명 </td>
+            </tr>
+                                <tr>
+                            <td> attach </td>
+                <td> 첨부파일 </td>
+                <td> nv_attach </td>
+                <td>
+                                            저장파일명
+                     </td>
+                <td> attach_saved_name </td>
+                <td> VARCHAR(200) </td>
+                <td>
+                     </td>
+                <td>  </td>
+                <td>  NULL  </td>
+                <td>  </td>
+                <td >  </td>
+                <td> 저장파일명 </td>
+            </tr>
+                                <tr>
+                            <td> attach </td>
+                <td> 첨부파일 </td>
+                <td> nv_attach </td>
+                <td>
+                                            저장경로
+                     </td>
+                <td> attach_saved_dir </td>
+                <td> VARCHAR(150) </td>
+                <td>
+                     </td>
+                <td>  </td>
+                <td>  NULL  </td>
+                <td>  </td>
+                <td >  </td>
+                <td> 저장경로 </td>
+            </tr>
+                                <tr>
+                            <td> attach </td>
+                <td> 첨부파일 </td>
+                <td> nv_attach </td>
+                <td>
+                                            파일타입
+                     </td>
+                <td> attach_file_type </td>
+                <td> VARCHAR(100) </td>
+                <td>
+                     </td>
+                <td>  </td>
+                <td>  NULL  </td>
+                <td>  </td>
+                <td >  </td>
+                <td> 파일타입 </td>
+            </tr>
+                                <tr>
+                            <td> attach </td>
+                <td> 첨부파일 </td>
+                <td> nv_attach </td>
+                <td>
+                                            파일사이즈
+                     </td>
+                <td> attach_file_size </td>
+                <td> DECIMAL </td>
+                <td>
+                     </td>
+                <td>  </td>
+                <td>  NULL  </td>
+                <td>  </td>
+                <td >  </td>
+                <td> 파일사이즈 </td>
+            </tr>
+                                <tr>
+                            <td> attach </td>
+                <td> 첨부파일 </td>
+                <td> nv_attach </td>
+                <td>
+                                            삭제여부
+                     </td>
+                <td> attach_deleted </td>
+                <td> BIT </td>
+                <td>
+                     </td>
+                <td>  </td>
+                <td>  NULL  </td>
+                <td>  </td>
+                <td >  </td>
+                <td> 삭제여부 </td>
+            </tr>
+                                <tr>
+                            <td> attach </td>
+                <td> 첨부파일 </td>
+                <td> nv_attach </td>
+                <td>
+                                            확장컬럼
+                     </td>
+                <td> attach_ext </td>
+                <td> LONGVARCHAR </td>
+                <td>
+                     </td>
+                <td>  </td>
+                <td>  NULL  </td>
+                <td>  </td>
+                <td >  </td>
+                <td> 확장컬럼 </td>
+            </tr>
+                                <tr>
+                            <td> attach </td>
+                <td> 첨부파일 </td>
+                <td> nv_attach </td>
+                <td>
+                                            등록자
+                     </td>
+                <td> attach_created_by </td>
+                <td> BIGINT </td>
+                <td>
+                     </td>
+                <td>  </td>
+                <td>  NULL  </td>
+                <td>  </td>
+                <td >  </td>
+                <td> 등록자 </td>
+            </tr>
+                                <tr>
+                            <td> attach </td>
+                <td> 첨부파일 </td>
+                <td> nv_attach </td>
+                <td>
+                                            등록일시
+                     </td>
+                <td> attach_created_dt </td>
+                <td> TIMESTAMP </td>
+                <td>
+                     </td>
+                <td>  </td>
+                <td>  NULL  </td>
+                <td>  </td>
+                <td >  </td>
+                <td> 등록일시 </td>
+            </tr>
+                                
+            <tr class="column-header">
+                            <td> common </td>
+                <td> 카테고리 </td>
+                <td> nv_category </td>
+                <td>
+                                            카테고리ID
+                     </td>
+                <td> cate_id </td>
+                <td> BIGINT </td>
+                <td>
+                                            PK
+                     </td>
+                <td> U </td>
+                <td>  </td>
+                <td>  </td>
+                <td >  </td>
+                <td> 카테고리ID </td>
+            </tr>
+                                <tr>
+                            <td> common </td>
+                <td> 카테고리 </td>
+                <td> nv_category </td>
+                <td>
+                                            네임스페이스
+                     </td>
+                <td> cate_namespace </td>
+                <td> VARCHAR(20) </td>
+                <td>
+                     </td>
+                <td>  </td>
+                <td>  NULL  </td>
+                <td>  </td>
+                <td >  </td>
+                <td> 네임스페이스 </td>
+            </tr>
+                                <tr>
+                            <td> common </td>
+                <td> 카테고리 </td>
+                <td> nv_category </td>
+                <td>
+                                            카테고리전체경로
+                     </td>
+                <td> cate_full_path </td>
+                <td> VARCHAR(1000) </td>
+                <td>
+                     </td>
+                <td>  </td>
+                <td>  </td>
+                <td>  </td>
+                <td >  </td>
+                <td> 카테고리전체경로 </td>
+            </tr>
+                                <tr>
+                            <td> common </td>
+                <td> 카테고리 </td>
+                <td> nv_category </td>
+                <td>
+                                            카테고리코드
+                     </td>
+                <td> cate_code </td>
+                <td> VARCHAR(20) </td>
+                <td>
+                     </td>
+                <td>  </td>
+                <td>  </td>
+                <td>  </td>
+                <td >  </td>
+                <td> 카테고리코드 </td>
+            </tr>
+                                <tr>
+                            <td> common </td>
+                <td> 카테고리 </td>
+                <td> nv_category </td>
+                <td>
+                                            상위카테고리 아이디
+                     </td>
+                <td> cate_parent_id </td>
+                <td> BIGINT </td>
+                <td>
+                     </td>
+                <td>  </td>
+                <td>  NULL  </td>
+                <td>  </td>
+                <td >  </td>
+                <td> 상위카테고리 아이디 </td>
+            </tr>
+                                <tr>
+                            <td> common </td>
+                <td> 카테고리 </td>
+                <td> nv_category </td>
+                <td>
+                                            상위카테고리 코드
+                     </td>
+                <td> cate_parent_code </td>
+                <td> VARCHAR(20) </td>
+                <td>
+                     </td>
+                <td>  </td>
+                <td>  NULL  </td>
+                <td>  </td>
+                <td >  </td>
+                <td> 상위카테고리 코드 </td>
+            </tr>
+                                <tr>
+                            <td> common </td>
+                <td> 카테고리 </td>
+                <td> nv_category </td>
+                <td>
+                                            현재DEPTH
+                     </td>
+                <td> cate_depth </td>
+                <td> INTEGER </td>
+                <td>
+                     </td>
+                <td>  </td>
+                <td>  NULL  </td>
+                <td>  </td>
+                <td >  </td>
+                <td> 현재DEPTH </td>
+            </tr>
+                                <tr>
+                            <td> common </td>
+                <td> 카테고리 </td>
+                <td> nv_category </td>
+                <td>
+                                            최대DEPTH
+                     </td>
+                <td> cate_max_depth </td>
+                <td> INTEGER </td>
+                <td>
+                     </td>
+                <td>  </td>
+                <td>  NULL  </td>
+                <td>  </td>
+                <td >  </td>
+                <td> 최대DEPTH </td>
+            </tr>
+                                <tr>
+                            <td> common </td>
+                <td> 카테고리 </td>
+                <td> nv_category </td>
+                <td>
+                                            삭제불가여부
+                     </td>
+                <td> cate_fixed </td>
+                <td> BIT </td>
+                <td>
+                     </td>
+                <td>  </td>
+                <td>  NULL  </td>
+                <td>  </td>
+                <td >  </td>
+                <td> 삭제불가여부 </td>
+            </tr>
+                                <tr>
+                            <td> common </td>
+                <td> 카테고리 </td>
+                <td> nv_category </td>
+                <td>
+                                            카테고리명
+                     </td>
+                <td> cate_name </td>
+                <td> VARCHAR(500) </td>
+                <td>
+                     </td>
+                <td>  </td>
+                <td>  </td>
+                <td>  </td>
+                <td >  </td>
+                <td> 카테고리명 </td>
+            </tr>
+                                <tr>
+                            <td> common </td>
+                <td> 카테고리 </td>
+                <td> nv_category </td>
+                <td>
+                                            카테고리설명
+                     </td>
+                <td> cate_desc </td>
+                <td> VARCHAR(1000) </td>
+                <td>
+                     </td>
+                <td>  </td>
+                <td>  NULL  </td>
+                <td>  </td>
+                <td >  </td>
+                <td> 카테고리설명 </td>
+            </tr>
+                                <tr>
+                            <td> common </td>
+                <td> 카테고리 </td>
+                <td> nv_category </td>
+                <td>
+                                            카테고리값
+                     </td>
+                <td> cate_value </td>
+                <td> VARCHAR(4000) </td>
+                <td>
+                     </td>
+                <td>  </td>
+                <td>  NULL  </td>
+                <td>  </td>
+                <td >  </td>
+                <td> 카테고리값 </td>
+            </tr>
+                                <tr>
+                            <td> common </td>
+                <td> 카테고리 </td>
+                <td> nv_category </td>
+                <td>
+                                            카테고리확장값-json
+                     </td>
+                <td> cate_ext </td>
+                <td> LONGVARCHAR </td>
+                <td>
+                     </td>
+                <td>  </td>
+                <td>  NULL  </td>
+                <td>  </td>
+                <td >  </td>
+                <td> 카테고리확장값-json </td>
+            </tr>
+                                <tr>
+                            <td> common </td>
+                <td> 카테고리 </td>
+                <td> nv_category </td>
+                <td>
+                                            정렬순서
+                     </td>
+                <td> cate_sort </td>
+                <td> INTEGER </td>
+                <td>
+                     </td>
+                <td>  </td>
+                <td>  NULL  </td>
+                <td>  </td>
+                <td >  </td>
+                <td> 정렬순서 </td>
+            </tr>
+                                <tr>
+                            <td> common </td>
+                <td> 카테고리 </td>
+                <td> nv_category </td>
+                <td>
+                                            삭제여부
+                     </td>
+                <td> cate_deleted </td>
+                <td> BIT </td>
+                <td>
+                     </td>
+                <td>  </td>
+                <td>  NULL  </td>
+                <td>  </td>
+                <td >  </td>
+                <td> 삭제여부 </td>
+            </tr>
+                                <tr>
+                            <td> common </td>
+                <td> 카테고리 </td>
+                <td> nv_category </td>
+                <td>
+                                            등록자
+                     </td>
+                <td> cate_created_by </td>
+                <td> BIGINT </td>
+                <td>
+                     </td>
+                <td>  </td>
+                <td>  NULL  </td>
+                <td>  </td>
+                <td >  </td>
+                <td> 등록자 </td>
+            </tr>
+                                <tr>
+                            <td> common </td>
+                <td> 카테고리 </td>
+                <td> nv_category </td>
+                <td>
+                                            등록일시
+                     </td>
+                <td> cate_created_dt </td>
+                <td> TIMESTAMP </td>
+                <td>
+                     </td>
+                <td>  </td>
+                <td>  NULL  </td>
+                <td>  </td>
+                <td >  </td>
+                <td> 등록일시 </td>
+            </tr>
+                                <tr>
+                            <td> common </td>
+                <td> 카테고리 </td>
+                <td> nv_category </td>
+                <td>
+                                            수정자
+                     </td>
+                <td> cate_modified_by </td>
+                <td> BIGINT </td>
+                <td>
+                     </td>
+                <td>  </td>
+                <td>  NULL  </td>
+                <td>  </td>
+                <td >  </td>
+                <td> 수정자 </td>
+            </tr>
+                                <tr>
+                            <td> common </td>
+                <td> 카테고리 </td>
+                <td> nv_category </td>
+                <td>
+                                            수정일시
+                     </td>
+                <td> cate_modified_dt </td>
+                <td> TIMESTAMP </td>
+                <td>
+                     </td>
+                <td>  </td>
+                <td>  NULL  </td>
+                <td>  </td>
+                <td >  </td>
+                <td> 수정일시 </td>
+            </tr>
+                                
+            <tr class="column-header">
+                            <td> common </td>
+                <td> 공통-라벨벨류 </td>
+                <td> nv_label_value </td>
+                <td>
+                                            아이디
+                     </td>
+                <td> lv_id </td>
+                <td> BIGINT </td>
+                <td>
+                                            PK
+                     </td>
+                <td> U </td>
+                <td>  </td>
+                <td>  </td>
+                <td >  </td>
+                <td> 아이디 </td>
+            </tr>
+                                <tr>
+                            <td> common </td>
+                <td> 공통-라벨벨류 </td>
+                <td> nv_label_value </td>
+                <td>
+                                            참조대상
+                     </td>
+                <td> lv_ref_target </td>
+                <td> VARCHAR(100) </td>
+                <td>
+                     </td>
+                <td>  </td>
+                <td>  NULL  </td>
+                <td>  </td>
+                <td >  </td>
+                <td> 참조대상 </td>
+            </tr>
+                                <tr>
+                            <td> common </td>
+                <td> 공통-라벨벨류 </td>
+                <td> nv_label_value </td>
+                <td>
+                                            찹조키
+                     </td>
+                <td> lv_ref_target_key </td>
+                <td> BIGINT </td>
+                <td>
+                     </td>
+                <td>  </td>
+                <td>  NULL  </td>
+                <td>  </td>
+                <td >  </td>
+                <td> 찹조키 </td>
+            </tr>
+                                <tr>
+                            <td> common </td>
+                <td> 공통-라벨벨류 </td>
+                <td> nv_label_value </td>
+                <td>
+                                            참조타입
+                     </td>
+                <td> lv_ref_target_type </td>
+                <td> VARCHAR(100) </td>
+                <td>
+                     </td>
+                <td>  </td>
+                <td>  NULL  </td>
+                <td>  </td>
+                <td >  </td>
+                <td> 참조타입 </td>
+            </tr>
+                                <tr>
+                            <td> common </td>
+                <td> 공통-라벨벨류 </td>
+                <td> nv_label_value </td>
+                <td>
+                                            라벨
+                     </td>
+                <td> lv_label </td>
+                <td> VARCHAR(500) </td>
+                <td>
+                     </td>
+                <td>  </td>
+                <td>  NULL  </td>
+                <td>  </td>
+                <td >  </td>
+                <td> 라벨 </td>
+            </tr>
+                                <tr>
+                            <td> common </td>
+                <td> 공통-라벨벨류 </td>
+                <td> nv_label_value </td>
+                <td>
+                                            값
+                     </td>
+                <td> lv_value </td>
+                <td> VARCHAR(2000) </td>
+                <td>
+                     </td>
+                <td>  </td>
+                <td>  NULL  </td>
+                <td>  </td>
+                <td >  </td>
+                <td> 값 </td>
+            </tr>
+                                <tr>
+                            <td> common </td>
+                <td> 공통-라벨벨류 </td>
+                <td> nv_label_value </td>
+                <td>
+                                            추가정보1
+                     </td>
+                <td> lv_ext1 </td>
+                <td> VARCHAR(2000) </td>
+                <td>
+                     </td>
+                <td>  </td>
+                <td>  NULL  </td>
+                <td>  </td>
+                <td >  </td>
+                <td> 추가정보1 </td>
+            </tr>
+                                <tr>
+                            <td> common </td>
+                <td> 공통-라벨벨류 </td>
+                <td> nv_label_value </td>
+                <td>
+                                            추가정보2
+                     </td>
+                <td> lv_ext2 </td>
+                <td> VARCHAR(2000) </td>
+                <td>
+                     </td>
+                <td>  </td>
+                <td>  NULL  </td>
+                <td>  </td>
+                <td >  </td>
+                <td> 추가정보2 </td>
+            </tr>
+                                <tr>
+                            <td> common </td>
+                <td> 공통-라벨벨류 </td>
+                <td> nv_label_value </td>
+                <td>
+                                            정렬순서
+                     </td>
+                <td> lv_sort </td>
+                <td> INTEGER </td>
+                <td>
+                     </td>
+                <td>  </td>
+                <td>  NULL  </td>
+                <td>  </td>
+                <td >  </td>
+                <td> 정렬순서 </td>
+            </tr>
+                                <tr>
+                            <td> common </td>
+                <td> 공통-라벨벨류 </td>
+                <td> nv_label_value </td>
+                <td>
+                                            수정일시
+                     </td>
+                <td> lv_modified_dt </td>
+                <td> TIMESTAMP </td>
+                <td>
+                     </td>
+                <td>  </td>
+                <td>  NULL  </td>
+                <td>  </td>
+                <td >  </td>
+                <td> 수정일시 </td>
+            </tr>
+                                <tr>
+                            <td> common </td>
+                <td> 공통-라벨벨류 </td>
+                <td> nv_label_value </td>
+                <td>
+                                            수정자
+                     </td>
+                <td> lv_modified_by </td>
+                <td> BIGINT </td>
+                <td>
+                     </td>
+                <td>  </td>
+                <td>  NULL  </td>
+                <td>  </td>
+                <td >  </td>
+                <td> 수정자 </td>
+            </tr>
+                                
+            <tr class="column-header">
+                            <td> common </td>
+                <td> 공통-전화번호 </td>
+                <td> nv_phone </td>
+                <td>
+                                            아이디
+                     </td>
+                <td> phone_id </td>
+                <td> BIGINT </td>
+                <td>
+                                            PK
+                     </td>
+                <td> U </td>
+                <td>  </td>
+                <td>  </td>
+                <td >  </td>
+                <td> 아이디 </td>
+            </tr>
+                                <tr>
+                            <td> common </td>
+                <td> 공통-전화번호 </td>
+                <td> nv_phone </td>
+                <td>
+                                            참조대상
+                     </td>
+                <td> phone_ref_target </td>
+                <td> VARCHAR(100) </td>
+                <td>
+                     </td>
+                <td>  </td>
+                <td>  NULL  </td>
+                <td>  </td>
+                <td >  </td>
+                <td> 참조대상 </td>
+            </tr>
+                                <tr>
+                            <td> common </td>
+                <td> 공통-전화번호 </td>
+                <td> nv_phone </td>
+                <td>
+                                            찹조키
+                     </td>
+                <td> phone_ref_target_key </td>
+                <td> BIGINT </td>
+                <td>
+                     </td>
+                <td>  </td>
+                <td>  NULL  </td>
+                <td>  </td>
+                <td >  </td>
+                <td> 찹조키 </td>
+            </tr>
+                                <tr>
+                            <td> common </td>
+                <td> 공통-전화번호 </td>
+                <td> nv_phone </td>
+                <td>
+                                            참조타입
+                     </td>
+                <td> phone_ref_target_type </td>
+                <td> VARCHAR(100) </td>
+                <td>
+                     </td>
+                <td>  </td>
+                <td>  NULL  </td>
+                <td>  </td>
+                <td >  </td>
+                <td> 참조타입 </td>
+            </tr>
+                                <tr>
+                            <td> common </td>
+                <td> 공통-전화번호 </td>
+                <td> nv_phone </td>
+                <td>
+                                            전화번호명
+                     </td>
+                <td> phone_name </td>
+                <td> VARCHAR(200) </td>
+                <td>
+                     </td>
+                <td>  </td>
+                <td>  NULL  </td>
+                <td>  </td>
+                <td >  </td>
+                <td> 전화번호명 </td>
+            </tr>
+                                <tr>
+                            <td> common </td>
+                <td> 공통-전화번호 </td>
+                <td> nv_phone </td>
+                <td>
+                                            국가코드
+                     </td>
+                <td> phone_cc </td>
+                <td> VARCHAR(10) </td>
+                <td>
+                     </td>
+                <td>  </td>
+                <td>  NULL  </td>
+                <td>  </td>
+                <td >  </td>
+                <td> 국가코드 </td>
+            </tr>
+                                <tr>
+                            <td> common </td>
+                <td> 공통-전화번호 </td>
+                <td> nv_phone </td>
+                <td>
+                                            전화번호
+                     </td>
+                <td> phone_no </td>
+                <td> VARCHAR(50) </td>
+                <td>
+                     </td>
+                <td>  </td>
+                <td>  NULL  </td>
+                <td>  </td>
+                <td >  </td>
+                <td> 전화번호 </td>
+            </tr>
+                                <tr>
+                            <td> common </td>
+                <td> 공통-전화번호 </td>
+                <td> nv_phone </td>
+                <td>
+                                            추가정보
+                     </td>
+                <td> phone_ext </td>
+                <td> VARCHAR(20) </td>
+                <td>
+                     </td>
+                <td>  </td>
+                <td>  NULL  </td>
+                <td>  </td>
+                <td >  </td>
+                <td> 추가정보 </td>
+            </tr>
+                                <tr>
+                            <td> common </td>
+                <td> 공통-전화번호 </td>
+                <td> nv_phone </td>
+                <td>
+                                            번호인증여부
+                     </td>
+                <td> phone_certed </td>
+                <td> BIT </td>
+                <td>
+                     </td>
+                <td>  </td>
+                <td>  NULL  </td>
+                <td>  </td>
+                <td >  </td>
+                <td> 번호인증여부 </td>
+            </tr>
+                                <tr>
+                            <td> common </td>
+                <td> 공통-전화번호 </td>
+                <td> nv_phone </td>
+                <td>
+                                            정렬순서
+                     </td>
+                <td> phone_sort </td>
+                <td> INTEGER </td>
+                <td>
+                     </td>
+                <td>  </td>
+                <td>  NULL  </td>
+                <td>  </td>
+                <td >  </td>
+                <td> 정렬순서 </td>
+            </tr>
+                                <tr>
+                            <td> common </td>
+                <td> 공통-전화번호 </td>
+                <td> nv_phone </td>
+                <td>
+                                            수정일시
+                     </td>
+                <td> phone_modified_dt </td>
+                <td> TIMESTAMP </td>
+                <td>
+                     </td>
+                <td>  </td>
+                <td>  NULL  </td>
+                <td>  </td>
+                <td >  </td>
+                <td> 수정일시 </td>
+            </tr>
+                                <tr>
+                            <td> common </td>
+                <td> 공통-전화번호 </td>
+                <td> nv_phone </td>
+                <td>
+                                            수정자
+                     </td>
+                <td> phone_modified_by </td>
+                <td> BIGINT </td>
+                <td>
+                     </td>
+                <td>  </td>
+                <td>  NULL  </td>
+                <td>  </td>
+                <td >  </td>
+                <td> 수정자 </td>
+            </tr>
+                                
+            <tr class="column-header">
+                            <td> common </td>
+                <td> 공통-주소 </td>
+                <td> nv_addr </td>
+                <td>
+                                            아이디
+                     </td>
+                <td> addr_id </td>
+                <td> BIGINT </td>
+                <td>
+                                            PK
+                     </td>
+                <td> U </td>
+                <td>  </td>
+                <td>  </td>
+                <td >  </td>
+                <td> 아이디 </td>
+            </tr>
+                                <tr>
+                            <td> common </td>
+                <td> 공통-주소 </td>
+                <td> nv_addr </td>
+                <td>
+                                            참조대상
+                     </td>
+                <td> addr_ref_target </td>
+                <td> VARCHAR(100) </td>
+                <td>
+                     </td>
+                <td>  </td>
+                <td>  NULL  </td>
+                <td>  </td>
+                <td >  </td>
+                <td> 참조대상 </td>
+            </tr>
+                                <tr>
+                            <td> common </td>
+                <td> 공통-주소 </td>
+                <td> nv_addr </td>
+                <td>
+                                            참조키
+                     </td>
+                <td> addr_ref_target_key </td>
+                <td> BIGINT </td>
+                <td>
+                     </td>
+                <td>  </td>
+                <td>  NULL  </td>
+                <td>  </td>
+                <td >  </td>
+                <td> 참조키 </td>
+            </tr>
+                                <tr>
+                            <td> common </td>
+                <td> 공통-주소 </td>
+                <td> nv_addr </td>
+                <td>
+                                            참조타입
+                     </td>
+                <td> addr_ref_target_type </td>
+                <td> VARCHAR(100) </td>
+                <td>
+                     </td>
+                <td>  </td>
+                <td>  NULL  </td>
+                <td>  </td>
+                <td >  </td>
+                <td> 참조타입 </td>
+            </tr>
+                                <tr>
+                            <td> common </td>
+                <td> 공통-주소 </td>
+                <td> nv_addr </td>
+                <td>
+                                            주소별칭
+                     </td>
+                <td> addr_alias_name </td>
+                <td> VARCHAR(200) </td>
+                <td>
+                     </td>
+                <td>  </td>
+                <td>  NULL  </td>
+                <td>  </td>
+                <td >  </td>
+                <td> 주소별칭 </td>
+            </tr>
+                                <tr>
+                            <td> common </td>
+                <td> 공통-주소 </td>
+                <td> nv_addr </td>
+                <td>
+                                            시도코드
+                     </td>
+                <td> addr_sido_code </td>
+                <td> VARCHAR(20) </td>
+                <td>
+                     </td>
+                <td>  </td>
+                <td>  NULL  </td>
+                <td>  </td>
+                <td >  </td>
+                <td> 시도코드 </td>
+            </tr>
+                                <tr>
+                            <td> common </td>
+                <td> 공통-주소 </td>
+                <td> nv_addr </td>
+                <td>
+                                            구군코드
+                     </td>
+                <td> addr_gugun_code </td>
+                <td> VARCHAR(20) </td>
+                <td>
+                     </td>
+                <td>  </td>
+                <td>  NULL  </td>
+                <td>  </td>
+                <td >  </td>
+                <td> 구군코드 </td>
+            </tr>
+                                <tr>
+                            <td> common </td>
+                <td> 공통-주소 </td>
+                <td> nv_addr </td>
+                <td>
+                                            법정동코드
+                     </td>
+                <td> addr_lgl_code </td>
+                <td> VARCHAR(20) </td>
+                <td>
+                     </td>
+                <td>  </td>
+                <td>  NULL  </td>
+                <td>  </td>
+                <td >  </td>
+                <td> 법정동코드 </td>
+            </tr>
+                                <tr>
+                            <td> common </td>
+                <td> 공통-주소 </td>
+                <td> nv_addr </td>
+                <td>
+                                            시도
+                     </td>
+                <td> addr_sido </td>
+                <td> VARCHAR(100) </td>
+                <td>
+                     </td>
+                <td>  </td>
+                <td>  NULL  </td>
+                <td>  </td>
+                <td >  </td>
+                <td> 시도 </td>
+            </tr>
+                                <tr>
+                            <td> common </td>
+                <td> 공통-주소 </td>
+                <td> nv_addr </td>
+                <td>
+                                            구군
+                     </td>
+                <td> addr_gugun </td>
+                <td> VARCHAR(100) </td>
+                <td>
+                     </td>
+                <td>  </td>
+                <td>  NULL  </td>
+                <td>  </td>
+                <td >  </td>
+                <td> 구군 </td>
+            </tr>
+                                <tr>
+                            <td> common </td>
+                <td> 공통-주소 </td>
+                <td> nv_addr </td>
+                <td>
+                                            읍면동
+                     </td>
+                <td> addr_dong </td>
+                <td> VARCHAR(100) </td>
+                <td>
+                     </td>
+                <td>  </td>
+                <td>  NULL  </td>
+                <td>  </td>
+                <td >  </td>
+                <td> 읍면동 </td>
+            </tr>
+                                <tr>
+                            <td> common </td>
+                <td> 공통-주소 </td>
+                <td> nv_addr </td>
+                <td>
+                                            도로명 주소-우편번호
+                     </td>
+                <td> addr_road_zip </td>
+                <td> VARCHAR(6) </td>
+                <td>
+                     </td>
+                <td>  </td>
+                <td>  NULL  </td>
+                <td>  </td>
+                <td >  </td>
+                <td> 도로명 주소-우편번호 </td>
+            </tr>
+                                <tr>
+                            <td> common </td>
+                <td> 공통-주소 </td>
+                <td> nv_addr </td>
+                <td>
+                                            도로명 주소-주소고정
+                     </td>
+                <td> addr_road_address </td>
+                <td> VARCHAR(500) </td>
+                <td>
+                     </td>
+                <td>  </td>
+                <td>  NULL  </td>
+                <td>  </td>
+                <td >  </td>
+                <td> 도로명 주소-주소고정 </td>
+            </tr>
+                                <tr>
+                            <td> common </td>
+                <td> 공통-주소 </td>
+                <td> nv_addr </td>
+                <td>
+                                            지번 주소-우편번호
+                     </td>
+                <td> addr_ltno_zip </td>
+                <td> VARCHAR(6) </td>
+                <td>
+                     </td>
+                <td>  </td>
+                <td>  NULL  </td>
+                <td>  </td>
+                <td >  </td>
+                <td> 지번 주소-우편번호 </td>
+            </tr>
+                                <tr>
+                            <td> common </td>
+                <td> 공통-주소 </td>
+                <td> nv_addr </td>
+                <td>
+                                            지번 주소-주소고정
+                     </td>
+                <td> addr_ltno_address </td>
+                <td> VARCHAR(500) </td>
+                <td>
+                     </td>
+                <td>  </td>
+                <td>  NULL  </td>
+                <td>  </td>
+                <td >  </td>
+                <td> 지번 주소-주소고정 </td>
+            </tr>
+                                <tr>
+                            <td> common </td>
+                <td> 공통-주소 </td>
+                <td> nv_addr </td>
+                <td>
+                                            주소상세
+                     </td>
+                <td> addr_address_detail </td>
+                <td> VARCHAR(500) </td>
+                <td>
+                     </td>
+                <td>  </td>
+                <td>  NULL  </td>
+                <td>  </td>
+                <td >  </td>
+                <td> 주소상세 </td>
+            </tr>
+                                <tr>
+                            <td> common </td>
+                <td> 공통-주소 </td>
+                <td> nv_addr </td>
+                <td>
+                                            GIS 좌표
+                     </td>
+                <td> addr_point </td>
+                <td> OTHER </td>
+                <td>
+                     </td>
+                <td>  </td>
+                <td>  NULL  </td>
+                <td>  </td>
+                <td >  </td>
+                <td> GIS 좌표 </td>
+            </tr>
+                                <tr>
+                            <td> common </td>
+                <td> 공통-주소 </td>
+                <td> nv_addr </td>
+                <td>
+                                            정렬순서
+                     </td>
+                <td> addr_sort </td>
+                <td> INTEGER </td>
+                <td>
+                     </td>
+                <td>  </td>
+                <td>  NULL  </td>
+                <td>  </td>
+                <td >  </td>
+                <td> 정렬순서 </td>
+            </tr>
+                                
+            <tr class="column-header">
+                            <td> common </td>
+                <td> 액션로그 </td>
+                <td> nv_action_log </td>
+                <td>
+                                            아이디
+                     </td>
+                <td> al_id </td>
+                <td> BIGINT </td>
+                <td>
+                                            PK
+                     </td>
+                <td> U </td>
+                <td>  </td>
+                <td>  </td>
+                <td >  </td>
+                <td> 아이디 </td>
+            </tr>
+                                <tr>
+                            <td> common </td>
+                <td> 액션로그 </td>
+                <td> nv_action_log </td>
+                <td>
+                                            참조구분
+                     </td>
+                <td> al_ref_target </td>
+                <td> VARCHAR(100) </td>
+                <td>
+                     </td>
+                <td>  </td>
+                <td>  </td>
+                <td>  </td>
+                <td >  </td>
+                <td> 참조구분 </td>
+            </tr>
+                                <tr>
+                            <td> common </td>
+                <td> 액션로그 </td>
+                <td> nv_action_log </td>
+                <td>
+                                            참조구분키
+                     </td>
+                <td> al_ref_target_key </td>
+                <td> BIGINT </td>
+                <td>
+                     </td>
+                <td>  </td>
+                <td>  </td>
+                <td>  </td>
+                <td >  </td>
+                <td> 참조구분키 </td>
+            </tr>
+                                <tr>
+                            <td> common </td>
+                <td> 액션로그 </td>
+                <td> nv_action_log </td>
+                <td>
+                                            참조타입
+                     </td>
+                <td> al_ref_target_type </td>
+                <td> VARCHAR(100) </td>
+                <td>
+                     </td>
+                <td>  </td>
+                <td>  NULL  </td>
+                <td>  </td>
+                <td >  </td>
+                <td> 참조타입 </td>
+            </tr>
+                                <tr>
+                            <td> common </td>
+                <td> 액션로그 </td>
+                <td> nv_action_log </td>
+                <td>
+                                            액션
+                     </td>
+                <td> al_action </td>
+                <td> VARCHAR(20) </td>
+                <td>
+                     </td>
+                <td>  </td>
+                <td>  NULL  </td>
+                <td>  </td>
+                <td >  </td>
+                <td> 액션 </td>
+            </tr>
+                                <tr>
+                            <td> common </td>
+                <td> 액션로그 </td>
+                <td> nv_action_log </td>
+                <td>
+                                            로그
+                     </td>
+                <td> al_log </td>
+                <td> LONGVARCHAR </td>
+                <td>
+                     </td>
+                <td>  </td>
+                <td>  NULL  </td>
+                <td>  </td>
+                <td >  </td>
+                <td> 로그 </td>
+            </tr>
+                                <tr>
+                            <td> common </td>
+                <td> 액션로그 </td>
+                <td> nv_action_log </td>
+                <td>
+                                            메시지
+                     </td>
+                <td> al_message </td>
+                <td> VARCHAR(100) </td>
+                <td>
+                     </td>
+                <td>  </td>
+                <td>  NULL  </td>
+                <td>  </td>
+                <td >  </td>
+                <td> 메시지 </td>
+            </tr>
+                                <tr>
+                            <td> common </td>
+                <td> 액션로그 </td>
+                <td> nv_action_log </td>
+                <td>
+                                            IP
+                     </td>
+                <td> al_ip </td>
+                <td> VARCHAR(20) </td>
+                <td>
+                     </td>
+                <td>  </td>
+                <td>  NULL  </td>
+                <td>  </td>
+                <td >  </td>
+                <td> IP </td>
+            </tr>
+                                <tr>
+                            <td> common </td>
+                <td> 액션로그 </td>
+                <td> nv_action_log </td>
+                <td>
+                                            년
+                     </td>
+                <td> al_year </td>
+                <td> INTEGER </td>
+                <td>
+                     </td>
+                <td>  </td>
+                <td>  NULL  </td>
+                <td>  </td>
+                <td >  </td>
+                <td> 년 </td>
+            </tr>
+                                <tr>
+                            <td> common </td>
+                <td> 액션로그 </td>
+                <td> nv_action_log </td>
+                <td>
+                                            월
+                     </td>
+                <td> al_month </td>
+                <td> INTEGER </td>
+                <td>
+                     </td>
+                <td>  </td>
+                <td>  NULL  </td>
+                <td>  </td>
+                <td >  </td>
+                <td> 월 </td>
+            </tr>
+                                <tr>
+                            <td> common </td>
+                <td> 액션로그 </td>
+                <td> nv_action_log </td>
+                <td>
+                                            일
+                     </td>
+                <td> al_day </td>
+                <td> INTEGER </td>
+                <td>
+                     </td>
+                <td>  </td>
+                <td>  NULL  </td>
+                <td>  </td>
+                <td >  </td>
+                <td> 일 </td>
+            </tr>
+                                <tr>
+                            <td> common </td>
+                <td> 액션로그 </td>
+                <td> nv_action_log </td>
+                <td>
+                                            등록자
+                     </td>
+                <td> al_created_by </td>
+                <td> BIGINT </td>
+                <td>
+                     </td>
+                <td>  </td>
+                <td>  NULL  </td>
+                <td>  </td>
+                <td >  </td>
+                <td> 등록자 </td>
+            </tr>
+                                <tr>
+                            <td> common </td>
+                <td> 액션로그 </td>
+                <td> nv_action_log </td>
+                <td>
+                                            등록일시
+                     </td>
+                <td> al_created_dt </td>
+                <td> TIMESTAMP </td>
+                <td>
+                     </td>
+                <td>  </td>
+                <td>  NULL  </td>
+                <td>  </td>
+                <td >  </td>
+                <td> 등록일시 </td>
+            </tr>
+                                
+            <tr class="column-header">
+                            <td> site </td>
+                <td> 사이트 설정 </td>
+                <td> nv_site_config </td>
+                <td>
+                                            아이디
+                     </td>
+                <td> sc_id </td>
+                <td> BIGINT </td>
+                <td>
+                                            PK
+                     </td>
+                <td> U </td>
+                <td>  </td>
+                <td>  </td>
+                <td >  </td>
+                <td> 아이디 </td>
+            </tr>
+                                <tr>
+                            <td> site </td>
+                <td> 사이트 설정 </td>
+                <td> nv_site_config </td>
+                <td>
+                                            현재 설정 여부
+                     </td>
+                <td> sc_current </td>
+                <td> BIT </td>
+                <td>
+                     </td>
+                <td>  </td>
+                <td>  NULL  </td>
+                <td>  </td>
+                <td >  </td>
+                <td> 현재 설정 여부 </td>
+            </tr>
+                                <tr>
+                            <td> site </td>
+                <td> 사이트 설정 </td>
+                <td> nv_site_config </td>
+                <td>
+                                            설정값
+                     </td>
+                <td> sc_config </td>
+                <td> LONGVARCHAR </td>
+                <td>
+                     </td>
+                <td>  </td>
+                <td>  NULL  </td>
+                <td>  </td>
+                <td >  </td>
+                <td> 설정값 </td>
+            </tr>
+                                <tr>
+                            <td> site </td>
+                <td> 사이트 설정 </td>
+                <td> nv_site_config </td>
+                <td>
+                                            수정일시
+                     </td>
+                <td> sc_modified_dt </td>
+                <td> TIMESTAMP </td>
+                <td>
+                     </td>
+                <td>  </td>
+                <td>  NULL  </td>
+                <td>  </td>
+                <td >  </td>
+                <td> 수정일시 </td>
+            </tr>
+                                <tr>
+                            <td> site </td>
+                <td> 사이트 설정 </td>
+                <td> nv_site_config </td>
+                <td>
+                                            수정자
+                     </td>
+                <td> sc_modified_by </td>
+                <td> BIGINT </td>
+                <td>
+                     </td>
+                <td>  </td>
+                <td>  NULL  </td>
+                <td>  </td>
+                <td >  </td>
+                <td> 수정자 </td>
+            </tr>
+                                
+            <tr class="column-header">
+                            <td> site </td>
+                <td> 약관 </td>
+                <td> nv_term </td>
+                <td>
+                                            약관코드
+                     </td>
+                <td> term_code </td>
+                <td> VARCHAR(20) </td>
+                <td>
+                                            PK
+                     </td>
+                <td> U </td>
+                <td>  </td>
+                <td>  </td>
+                <td >  </td>
+                <td> 약관코드 </td>
+            </tr>
+                                <tr>
+                            <td> site </td>
+                <td> 약관 </td>
+                <td> nv_term </td>
+                <td>
+                                            현재 약관리비전
+                     </td>
+                <td> term_revision </td>
+                <td> INTEGER </td>
+                <td>
+                     </td>
+                <td>  </td>
+                <td>  NULL  </td>
+                <td>  </td>
+                <td >  </td>
+                <td> 현재 약관리비전 </td>
+            </tr>
+                                <tr>
+                            <td> site </td>
+                <td> 약관 </td>
+                <td> nv_term </td>
+                <td>
+                                            삭제여부
+                     </td>
+                <td> term_deleted </td>
+                <td> BIT </td>
+                <td>
+                     </td>
+                <td>  </td>
+                <td>  NULL  </td>
+                <td>  </td>
+                <td >  </td>
+                <td> 삭제여부 </td>
+            </tr>
+                                <tr>
+                            <td> site </td>
+                <td> 약관 </td>
+                <td> nv_term </td>
+                <td>
+                                            등록일시
+                     </td>
+                <td> term_created_dt </td>
+                <td> TIMESTAMP </td>
+                <td>
+                     </td>
+                <td>  </td>
+                <td>  NULL  </td>
+                <td>  </td>
+                <td >  </td>
+                <td> 등록일시 </td>
+            </tr>
+                                <tr>
+                            <td> site </td>
+                <td> 약관 </td>
+                <td> nv_term </td>
+                <td>
+                                            등록자
+                     </td>
+                <td> term_created_by </td>
+                <td> BIGINT </td>
+                <td>
+                     </td>
+                <td>  </td>
+                <td>  NULL  </td>
+                <td>  </td>
+                <td >  </td>
+                <td> 등록자 </td>
+            </tr>
+                                
+            <tr class="column-header">
+                            <td> site </td>
+                <td> 약관내용 </td>
+                <td> nv_term_content </td>
+                <td>
+                                            약관코드
+                     </td>
+                <td> tc_code </td>
+                <td> VARCHAR(20) </td>
+                <td>
+                                            PK
+                     </td>
+                <td>  </td>
+                <td>  </td>
+                <td>  </td>
+                <td >  </td>
+                <td> 약관코드 </td>
+            </tr>
+                                <tr>
+                            <td> site </td>
+                <td> 약관내용 </td>
+                <td> nv_term_content </td>
+                <td>
+                                            약관리비전
+                     </td>
+                <td> tc_revision </td>
+                <td> INTEGER </td>
+                <td>
+                                            PK
+                     </td>
+                <td>  </td>
+                <td>  </td>
+                <td>  </td>
+                <td >  </td>
+                <td> 약관리비전 </td>
+            </tr>
+                                <tr>
+                            <td> site </td>
+                <td> 약관내용 </td>
+                <td> nv_term_content </td>
+                <td>
+                                            현재약관여부
+                     </td>
+                <td> tc_current </td>
+                <td> BIT </td>
+                <td>
+                     </td>
+                <td>  </td>
+                <td>  NULL  </td>
+                <td>  </td>
+                <td >  </td>
+                <td> 현재약관여부 </td>
+            </tr>
+                                <tr>
+                            <td> site </td>
+                <td> 약관내용 </td>
+                <td> nv_term_content </td>
+                <td>
+                                            약관제목
+                     </td>
+                <td> tc_title </td>
+                <td> VARCHAR(2000) </td>
+                <td>
+                     </td>
+                <td>  </td>
+                <td>  NULL  </td>
+                <td>  </td>
+                <td >  </td>
+                <td> 약관제목 </td>
+            </tr>
+                                <tr>
+                            <td> site </td>
+                <td> 약관내용 </td>
+                <td> nv_term_content </td>
+                <td>
+                                            약관내용
+                     </td>
+                <td> tc_content </td>
+                <td> LONGVARCHAR </td>
+                <td>
+                     </td>
+                <td>  </td>
+                <td>  NULL  </td>
+                <td>  </td>
+                <td >  </td>
+                <td> 약관내용 </td>
+            </tr>
+                                <tr>
+                            <td> site </td>
+                <td> 약관내용 </td>
+                <td> nv_term_content </td>
+                <td>
+                                            필수여부
+                     </td>
+                <td> tc_required </td>
+                <td> BIT </td>
+                <td>
+                     </td>
+                <td>  </td>
+                <td>  NULL  </td>
+                <td>  </td>
+                <td >  </td>
+                <td> 필수여부 </td>
+            </tr>
+                                <tr>
+                            <td> site </td>
+                <td> 약관내용 </td>
+                <td> nv_term_content </td>
+                <td>
+                                            버전 적용시작일시
+                     </td>
+                <td> tc_active_from_dt </td>
+                <td> TIMESTAMP </td>
+                <td>
+                     </td>
+                <td>  </td>
+                <td>  NULL  </td>
+                <td>  </td>
+                <td >  </td>
+                <td> 버전 적용시작일시 </td>
+            </tr>
+                                <tr>
+                            <td> site </td>
+                <td> 약관내용 </td>
+                <td> nv_term_content </td>
+                <td>
+                                            버전 게시종료일시
+                     </td>
+                <td> tc_active_to_dt </td>
+                <td> TIMESTAMP </td>
+                <td>
+                     </td>
+                <td>  </td>
+                <td>  NULL  </td>
+                <td>  </td>
+                <td >  </td>
+                <td> 버전 게시종료일시 </td>
+            </tr>
+                                <tr>
+                            <td> site </td>
+                <td> 약관내용 </td>
+                <td> nv_term_content </td>
+                <td>
+                                            수정일시
+                     </td>
+                <td> tc_modified_dt </td>
+                <td> TIMESTAMP </td>
+                <td>
+                     </td>
+                <td>  </td>
+                <td>  NULL  </td>
+                <td>  </td>
+                <td >  </td>
+                <td> 수정일시 </td>
+            </tr>
+                                <tr>
+                            <td> site </td>
+                <td> 약관내용 </td>
+                <td> nv_term_content </td>
+                <td>
+                                            수정자
+                     </td>
+                <td> tc_modified_by </td>
+                <td> BIGINT </td>
+                <td>
+                     </td>
+                <td>  </td>
+                <td>  NULL  </td>
+                <td>  </td>
+                <td >  </td>
+                <td> 수정자 </td>
+            </tr>
+                                
+            <tr class="column-header">
+                            <td> user </td>
+                <td> 사용자 </td>
+                <td> nv_user_account </td>
+                <td>
+                                            아이디
+                     </td>
+                <td> acnt_id </td>
+                <td> BIGINT </td>
+                <td>
+                                            PK
+                     </td>
+                <td> U </td>
+                <td>  </td>
+                <td>  </td>
+                <td >  </td>
+                <td> 아이디 </td>
+            </tr>
+                                <tr>
+                            <td> user </td>
+                <td> 사용자 </td>
+                <td> nv_user_account </td>
+                <td>
+                                            네임스페이스
+                     </td>
+                <td> acnt_namespace </td>
+                <td> VARCHAR(20) </td>
+                <td>
+                     </td>
+                <td>  </td>
+                <td>  NULL  </td>
+                <td>  </td>
+                <td >  </td>
+                <td> 네임스페이스. 서브사이트 존재시 구분값 </td>
+            </tr>
+                                <tr>
+                            <td> user </td>
+                <td> 사용자 </td>
+                <td> nv_user_account </td>
+                <td>
+                                            계정 타입
+                     </td>
+                <td> acnt_type </td>
+                <td> VARCHAR(20) </td>
+                <td>
+                     </td>
+                <td>  </td>
+                <td>  NULL  </td>
+                <td>  </td>
+                <td >  </td>
+                <td> 계정 타입. 관리자, 사용자 </td>
+            </tr>
+                                <tr>
+                            <td> user </td>
+                <td> 사용자 </td>
+                <td> nv_user_account </td>
+                <td>
+                                            계정상태
+                     </td>
+                <td> acnt_status </td>
+                <td> VARCHAR(20) </td>
+                <td>
+                     </td>
+                <td>  </td>
+                <td>  NULL  </td>
+                <td>  </td>
+                <td >  </td>
+                <td> 계정상태 </td>
+            </tr>
+                                <tr>
+                            <td> user </td>
+                <td> 사용자 </td>
+                <td> nv_user_account </td>
+                <td>
+                                            로그인 아이디
+                     </td>
+                <td> acnt_login </td>
+                <td> VARCHAR(100) </td>
+                <td>
+                     </td>
+                <td>  </td>
+                <td>  NULL  </td>
+                <td>  </td>
+                <td >  </td>
+                <td> 로그인 아이디 </td>
+            </tr>
+                                <tr>
+                            <td> user </td>
+                <td> 사용자 </td>
+                <td> nv_user_account </td>
+                <td>
+                                            로그인 패스워드
+                     </td>
+                <td> acnt_pwd </td>
+                <td> VARCHAR(200) </td>
+                <td>
+                     </td>
+                <td>  </td>
+                <td>  NULL  </td>
+                <td>  </td>
+                <td >  </td>
+                <td> 로그인 패스워드 </td>
+            </tr>
+                                <tr>
+                            <td> user </td>
+                <td> 사용자 </td>
+                <td> nv_user_account </td>
+                <td>
+                                            가입유형
+                     </td>
+                <td> acnt_join_type </td>
+                <td> VARCHAR(20) </td>
+                <td>
+                     </td>
+                <td>  </td>
+                <td>  NULL  </td>
+                <td>  </td>
+                <td >  </td>
+                <td> 가입유형 </td>
+            </tr>
+                                <tr>
+                            <td> user </td>
+                <td> 사용자 </td>
+                <td> nv_user_account </td>
+                <td>
+                                            계정 잠김여부
+                     </td>
+                <td> acnt_locked </td>
+                <td> BIT </td>
+                <td>
+                     </td>
+                <td>  </td>
+                <td>  NULL  </td>
+                <td>  </td>
+                <td >  </td>
+                <td> 계정 잠김여부 </td>
+            </tr>
+                                <tr>
+                            <td> user </td>
+                <td> 사용자 </td>
+                <td> nv_user_account </td>
+                <td>
+                                            계정 잠김일시
+                     </td>
+                <td> acnt_locked_dt </td>
+                <td> TIMESTAMP </td>
+                <td>
+                     </td>
+                <td>  </td>
+                <td>  NULL  </td>
+                <td>  </td>
+                <td >  </td>
+                <td> 계정 잠김일시 </td>
+            </tr>
+                                <tr>
+                            <td> user </td>
+                <td> 사용자 </td>
+                <td> nv_user_account </td>
+                <td>
+                                            계정 중지여부
+                     </td>
+                <td> acnt_disabled </td>
+                <td> BIT </td>
+                <td>
+                     </td>
+                <td>  </td>
+                <td>  NULL  </td>
+                <td>  </td>
+                <td >  </td>
+                <td> 계정 중지여부 </td>
+            </tr>
+                                <tr>
+                            <td> user </td>
+                <td> 사용자 </td>
+                <td> nv_user_account </td>
+                <td>
+                                            계정 중지일시
+                     </td>
+                <td> acnt_disabled_dt </td>
+                <td> TIMESTAMP </td>
+                <td>
+                     </td>
+                <td>  </td>
+                <td>  NULL  </td>
+                <td>  </td>
+                <td >  </td>
+                <td> 계정 중지일시 </td>
+            </tr>
+                                <tr>
+                            <td> user </td>
+                <td> 사용자 </td>
+                <td> nv_user_account </td>
+                <td>
+                                            계정 정지사유 코드
+                     </td>
+                <td> acnt_disabled_reason </td>
+                <td> VARCHAR(20) </td>
+                <td>
+                     </td>
+                <td>  </td>
+                <td>  NULL  </td>
+                <td>  </td>
+                <td >  </td>
+                <td> 계정 정지사유 코드 </td>
+            </tr>
+                                <tr>
+                            <td> user </td>
+                <td> 사용자 </td>
+                <td> nv_user_account </td>
+                <td>
+                                            계정 정지사유 메모
+                     </td>
+                <td> acnt_disabled_memo </td>
+                <td> VARCHAR(5000) </td>
+                <td>
+                     </td>
+                <td>  </td>
+                <td>  NULL  </td>
+                <td>  </td>
+                <td >  </td>
+                <td> 계정 정지사유 메모 </td>
+            </tr>
+                                <tr>
+                            <td> user </td>
+                <td> 사용자 </td>
+                <td> nv_user_account </td>
+                <td>
+                                            본인인증여부
+                     </td>
+                <td> acnt_id_veri </td>
+                <td> BIT </td>
+                <td>
+                     </td>
+                <td>  </td>
+                <td>  NULL  </td>
+                <td>  </td>
+                <td >  </td>
+                <td> 본인인증여부 </td>
+            </tr>
+                                <tr>
+                            <td> user </td>
+                <td> 사용자 </td>
+                <td> nv_user_account </td>
+                <td>
+                                            본인인증방법
+                     </td>
+                <td> acnt_id_veri_type </td>
+                <td> VARCHAR(20) </td>
+                <td>
+                     </td>
+                <td>  </td>
+                <td>  NULL  </td>
+                <td>  </td>
+                <td >  </td>
+                <td> 본인인증방법. 휴대폰, ipin </td>
+            </tr>
+                                <tr>
+                            <td> user </td>
+                <td> 사용자 </td>
+                <td> nv_user_account </td>
+                <td>
+                                            본인인증일시
+                     </td>
+                <td> acnt_id_veri_dt </td>
+                <td> TIMESTAMP </td>
+                <td>
+                     </td>
+                <td>  </td>
+                <td>  NULL  </td>
+                <td>  </td>
+                <td >  </td>
+                <td> 본인인증일시 </td>
+            </tr>
+                                <tr>
+                            <td> user </td>
+                <td> 사용자 </td>
+                <td> nv_user_account </td>
+                <td>
+                                            본인인증CI
+                     </td>
+                <td> acnt_id_veri_ci </td>
+                <td> VARCHAR(200) </td>
+                <td>
+                     </td>
+                <td>  </td>
+                <td>  NULL  </td>
+                <td>  </td>
+                <td >  </td>
+                <td> 본인인증CI </td>
+            </tr>
+                                <tr>
+                            <td> user </td>
+                <td> 사용자 </td>
+                <td> nv_user_account </td>
+                <td>
+                                            본인인증DI
+                     </td>
+                <td> acnt_id_veri_di </td>
+                <td> VARCHAR(200) </td>
+                <td>
+                     </td>
+                <td>  </td>
+                <td>  NULL  </td>
+                <td>  </td>
+                <td >  </td>
+                <td> 본인인증DI </td>
+            </tr>
+                                <tr>
+                            <td> user </td>
+                <td> 사용자 </td>
+                <td> nv_user_account </td>
+                <td>
+                                            실명인증여부
+                     </td>
+                <td> acnt_name_veri </td>
+                <td> BIT </td>
+                <td>
+                     </td>
+                <td>  </td>
+                <td>  NULL  </td>
+                <td>  </td>
+                <td >  </td>
+                <td> 실명인증여부 </td>
+            </tr>
+                                <tr>
+                            <td> user </td>
+                <td> 사용자 </td>
+                <td> nv_user_account </td>
+                <td>
+                                            실명인증일시
+                     </td>
+                <td> acnt_name_veri_dt </td>
+                <td> TIMESTAMP </td>
+                <td>
+                     </td>
+                <td>  </td>
+                <td>  NULL  </td>
+                <td>  </td>
+                <td >  </td>
+                <td> 실명인증일시 </td>
+            </tr>
+                                <tr>
+                            <td> user </td>
+                <td> 사용자 </td>
+                <td> nv_user_account </td>
+                <td>
+                                            휴면메일발송일시
+                     </td>
+                <td> acnt_dormant_alerted </td>
+                <td> TIMESTAMP </td>
+                <td>
+                     </td>
+                <td>  </td>
+                <td>  NULL  </td>
+                <td>  </td>
+                <td >  </td>
+                <td> 휴면메일발송일시 </td>
+            </tr>
+                                <tr>
+                            <td> user </td>
+                <td> 사용자 </td>
+                <td> nv_user_account </td>
+                <td>
+                                            휴면여부
+                     </td>
+                <td> acnt_dormant </td>
+                <td> BIT </td>
+                <td>
+                     </td>
+                <td>  </td>
+                <td>  NULL  </td>
+                <td>  </td>
+                <td >  </td>
+                <td> 휴면여부 </td>
+            </tr>
+                                <tr>
+                            <td> user </td>
+                <td> 사용자 </td>
+                <td> nv_user_account </td>
+                <td>
+                                            휴면일시
+                     </td>
+                <td> acnt_dormant_dt </td>
+                <td> TIMESTAMP </td>
+                <td>
+                     </td>
+                <td>  </td>
+                <td>  NULL  </td>
+                <td>  </td>
+                <td >  </td>
+                <td> 휴면일시 </td>
+            </tr>
+                                <tr>
+                            <td> user </td>
+                <td> 사용자 </td>
+                <td> nv_user_account </td>
+                <td>
+                                            탈퇴메일발송일시
+                     </td>
+                <td> acnt_close_alerted </td>
+                <td> TIMESTAMP </td>
+                <td>
+                     </td>
+                <td>  </td>
+                <td>  NULL  </td>
+                <td>  </td>
+                <td >  </td>
+                <td> 탈퇴메일발송일시 </td>
+            </tr>
+                                <tr>
+                            <td> user </td>
+                <td> 사용자 </td>
+                <td> nv_user_account </td>
+                <td>
+                                            자진탈퇴여부
+                     </td>
+                <td> acnt_close_self </td>
+                <td> BIT </td>
+                <td>
+                     </td>
+                <td>  </td>
+                <td>  NULL  </td>
+                <td>  </td>
+                <td >  </td>
+                <td> 자진탈퇴여부 </td>
+            </tr>
+                                <tr>
+                            <td> user </td>
+                <td> 사용자 </td>
+                <td> nv_user_account </td>
+                <td>
+                                            탈퇴여부
+                     </td>
+                <td> acnt_close </td>
+                <td> BIT </td>
+                <td>
+                     </td>
+                <td>  </td>
+                <td>  NULL  </td>
+                <td>  </td>
+                <td >  </td>
+                <td> 탈퇴여부 </td>
+            </tr>
+                                <tr>
+                            <td> user </td>
+                <td> 사용자 </td>
+                <td> nv_user_account </td>
+                <td>
+                                            탈퇴일시
+                     </td>
+                <td> acnt_close_dt </td>
+                <td> TIMESTAMP </td>
+                <td>
+                     </td>
+                <td>  </td>
+                <td>  NULL  </td>
+                <td>  </td>
+                <td >  </td>
+                <td> 탈퇴일시 </td>
+            </tr>
+                                <tr>
+                            <td> user </td>
+                <td> 사용자 </td>
+                <td> nv_user_account </td>
+                <td>
+                                            탈퇴사유코드
+                     </td>
+                <td> acnt_close_reason </td>
+                <td> VARCHAR(20) </td>
+                <td>
+                     </td>
+                <td>  </td>
+                <td>  NULL  </td>
+                <td>  </td>
+                <td >  </td>
+                <td> 탈퇴사유코드 </td>
+            </tr>
+                                <tr>
+                            <td> user </td>
+                <td> 사용자 </td>
+                <td> nv_user_account </td>
+                <td>
+                                            탈퇴사유메모
+                     </td>
+                <td> acnt_close_memo </td>
+                <td> VARCHAR(5000) </td>
+                <td>
+                     </td>
+                <td>  </td>
+                <td>  NULL  </td>
+                <td>  </td>
+                <td >  </td>
+                <td> 탈퇴사유메모 </td>
+            </tr>
+                                <tr>
+                            <td> user </td>
+                <td> 사용자 </td>
+                <td> nv_user_account </td>
+                <td>
+                                            패스워드변경일시
+                     </td>
+                <td> acnt_pwd_change_dt </td>
+                <td> TIMESTAMP </td>
+                <td>
+                     </td>
+                <td>  </td>
+                <td>  NULL  </td>
+                <td>  </td>
+                <td >  </td>
+                <td> 패스워드변경일시 </td>
+            </tr>
+                                <tr>
+                            <td> user </td>
+                <td> 사용자 </td>
+                <td> nv_user_account </td>
+                <td>
+                                            개인정보 유효기간
+                     </td>
+                <td> acnt_validity_in </td>
+                <td> INTEGER </td>
+                <td>
+                     </td>
+                <td>  </td>
+                <td>  NULL  </td>
+                <td>  </td>
+                <td >  </td>
+                <td> 개인정보 유효기간 </td>
+            </tr>
+                                <tr>
+                            <td> user </td>
+                <td> 사용자 </td>
+                <td> nv_user_account </td>
+                <td>
+                                            개인정보 유효기간 단위
+                     </td>
+                <td> acnt_validity_unit </td>
+                <td> VARCHAR(20) </td>
+                <td>
+                     </td>
+                <td>  </td>
+                <td>  NULL  </td>
+                <td>  </td>
+                <td >  </td>
+                <td> 개인정보 유효기간 단위 </td>
+            </tr>
+                                <tr>
+                            <td> user </td>
+                <td> 사용자 </td>
+                <td> nv_user_account </td>
+                <td>
+                                            삭제여부
+                     </td>
+                <td> acnt_deleted </td>
+                <td> BIT </td>
+                <td>
+                     </td>
+                <td>  </td>
+                <td>  NULL  </td>
+                <td>  </td>
+                <td >  </td>
+                <td> 삭제여부 </td>
+            </tr>
+                                <tr>
+                            <td> user </td>
+                <td> 사용자 </td>
+                <td> nv_user_account </td>
+                <td>
+                                            등록일시
+                     </td>
+                <td> acnt_created_dt </td>
+                <td> TIMESTAMP </td>
+                <td>
+                     </td>
+                <td>  </td>
+                <td>  NULL  </td>
+                <td>  </td>
+                <td >  </td>
+                <td> 등록일시 </td>
+            </tr>
+                                <tr>
+                            <td> user </td>
+                <td> 사용자 </td>
+                <td> nv_user_account </td>
+                <td>
+                                            등록자
+                     </td>
+                <td> acnt_created_by </td>
+                <td> BIGINT </td>
+                <td>
+                     </td>
+                <td>  </td>
+                <td>  NULL  </td>
+                <td>  </td>
+                <td >  </td>
+                <td> 등록자 </td>
+            </tr>
+                                <tr>
+                            <td> user </td>
+                <td> 사용자 </td>
+                <td> nv_user_account </td>
+                <td>
+                                            수정일시
+                     </td>
+                <td> acnt_modified_dt </td>
+                <td> TIMESTAMP </td>
+                <td>
+                     </td>
+                <td>  </td>
+                <td>  NULL  </td>
+                <td>  </td>
+                <td >  </td>
+                <td> 수정일시 </td>
+            </tr>
+                                <tr>
+                            <td> user </td>
+                <td> 사용자 </td>
+                <td> nv_user_account </td>
+                <td>
+                                            수정자
+                     </td>
+                <td> acnt_modified_by </td>
+                <td> BIGINT </td>
+                <td>
+                     </td>
+                <td>  </td>
+                <td>  NULL  </td>
+                <td>  </td>
+                <td >  </td>
+                <td> 수정자 </td>
+            </tr>
+                                
+            <tr class="column-header">
+                            <td> user </td>
+                <td> 사용자 상세 </td>
+                <td> nv_user </td>
+                <td>
+                                            아이디
+                     </td>
+                <td> user_id </td>
+                <td> BIGINT </td>
+                <td>
+                                            PK
+                     </td>
+                <td> U </td>
+                <td>  </td>
+                <td>  </td>
+                <td >  </td>
+                <td> 아이디 </td>
+            </tr>
+                                <tr>
+                            <td> user </td>
+                <td> 사용자 상세 </td>
+                <td> nv_user </td>
+                <td>
+                                            이름
+                     </td>
+                <td> user_name </td>
+                <td> VARCHAR(200) </td>
+                <td>
+                     </td>
+                <td>  </td>
+                <td>  NULL  </td>
+                <td>  </td>
+                <td >  </td>
+                <td> 이름 </td>
+            </tr>
+                                <tr>
+                            <td> user </td>
+                <td> 사용자 상세 </td>
+                <td> nv_user </td>
+                <td>
+                                            성별
+                     </td>
+                <td> user_gender </td>
+                <td> VARCHAR(1) </td>
+                <td>
+                     </td>
+                <td>  </td>
+                <td>  NULL  </td>
+                <td>  </td>
+                <td >  </td>
+                <td> 성별 </td>
+            </tr>
+                                <tr>
+                            <td> user </td>
+                <td> 사용자 상세 </td>
+                <td> nv_user </td>
+                <td>
+                                            생년월일-양읍력구분
+                     </td>
+                <td> user_birth_lunar </td>
+                <td> BIT </td>
+                <td>
+                     </td>
+                <td>  </td>
+                <td>  NULL  </td>
+                <td>  </td>
+                <td >  </td>
+                <td> 생년월일-양읍력구분 </td>
+            </tr>
+                                <tr>
+                            <td> user </td>
+                <td> 사용자 상세 </td>
+                <td> nv_user </td>
+                <td>
+                                            생년월일
+                     </td>
+                <td> user_birth_day </td>
+                <td> DATE </td>
+                <td>
+                     </td>
+                <td>  </td>
+                <td>  NULL  </td>
+                <td>  </td>
+                <td >  </td>
+                <td> 생년월일 </td>
+            </tr>
+                                <tr>
+                            <td> user </td>
+                <td> 사용자 상세 </td>
+                <td> nv_user </td>
+                <td>
+                                            회사-이름
+                     </td>
+                <td> user_comp_name </td>
+                <td> VARCHAR(200) </td>
+                <td>
+                     </td>
+                <td>  </td>
+                <td>  NULL  </td>
+                <td>  </td>
+                <td >  </td>
+                <td> 회사-이름 </td>
+            </tr>
+                                <tr>
+                            <td> user </td>
+                <td> 사용자 상세 </td>
+                <td> nv_user </td>
+                <td>
+                                            회사-직급
+                     </td>
+                <td> user_comp_rank </td>
+                <td> VARCHAR(200) </td>
+                <td>
+                     </td>
+                <td>  </td>
+                <td>  NULL  </td>
+                <td>  </td>
+                <td >  </td>
+                <td> 회사-직급 </td>
+            </tr>
+                                <tr>
+                            <td> user </td>
+                <td> 사용자 상세 </td>
+                <td> nv_user </td>
+                <td>
+                                            회사-직책
+                     </td>
+                <td> user_comp_role </td>
+                <td> VARCHAR(200) </td>
+                <td>
+                     </td>
+                <td>  </td>
+                <td>  NULL  </td>
+                <td>  </td>
+                <td >  </td>
+                <td> 회사-직책 </td>
+            </tr>
+                                <tr>
+                            <td> user </td>
+                <td> 사용자 상세 </td>
+                <td> nv_user </td>
+                <td>
+                                            노트
+                     </td>
+                <td> user_note </td>
+                <td> VARCHAR(5000) </td>
+                <td>
+                     </td>
+                <td>  </td>
+                <td>  NULL  </td>
+                <td>  </td>
+                <td >  </td>
+                <td> 노트 </td>
+            </tr>
+                                
+            <tr class="column-header">
+                            <td> user </td>
+                <td> 수신 동의 </td>
+                <td> nv_subscribe_agree </td>
+                <td>
+                                            아이디
+                     </td>
+                <td> sa_id </td>
+                <td> BIGINT </td>
+                <td>
+                                            PK
+                     </td>
+                <td> U </td>
+                <td>  </td>
+                <td>  </td>
+                <td >  </td>
+                <td> 아이디 </td>
+            </tr>
+                                <tr>
+                            <td> user </td>
+                <td> 수신 동의 </td>
+                <td> nv_subscribe_agree </td>
+                <td>
+                                            계정아이디
+                     </td>
+                <td> sa_acnt_id </td>
+                <td> BIGINT </td>
+                <td>
+                                            FK
+                     </td>
+                <td>  </td>
+                <td>  NULL  </td>
+                <td>  </td>
+                <td >  </td>
+                <td> 계정아이디 </td>
+            </tr>
+                                <tr>
+                            <td> user </td>
+                <td> 수신 동의 </td>
+                <td> nv_subscribe_agree </td>
+                <td>
+                                            송신 내용타입
+                     </td>
+                <td> sa_alert_type </td>
+                <td> VARCHAR(20) </td>
+                <td>
+                     </td>
+                <td>  </td>
+                <td>  NULL  </td>
+                <td>  </td>
+                <td >  </td>
+                <td> 송신 내용타입 </td>
+            </tr>
+                                <tr>
+                            <td> user </td>
+                <td> 수신 동의 </td>
+                <td> nv_subscribe_agree </td>
+                <td>
+                                            송신 채널코드
+                     </td>
+                <td> sa_chanel_code </td>
+                <td> VARCHAR(20) </td>
+                <td>
+                     </td>
+                <td>  </td>
+                <td>  NULL  </td>
+                <td>  </td>
+                <td >  </td>
+                <td> 송신 채널코드 </td>
+            </tr>
+                                <tr>
+                            <td> user </td>
+                <td> 수신 동의 </td>
+                <td> nv_subscribe_agree </td>
+                <td>
+                                            동의여부
+                     </td>
+                <td> sa_agree </td>
+                <td> BIT </td>
+                <td>
+                     </td>
+                <td>  </td>
+                <td>  NULL  </td>
+                <td>  </td>
+                <td >  </td>
+                <td> 동의여부 </td>
+            </tr>
+                                <tr>
+                            <td> user </td>
+                <td> 수신 동의 </td>
+                <td> nv_subscribe_agree </td>
+                <td>
+                                            수정일시
+                     </td>
+                <td> sa_modified_dt </td>
+                <td> TIMESTAMP </td>
+                <td>
+                     </td>
+                <td>  </td>
+                <td>  NULL  </td>
+                <td>  </td>
+                <td >  </td>
+                <td> 수정일시 </td>
+            </tr>
+                                <tr>
+                            <td> user </td>
+                <td> 수신 동의 </td>
+                <td> nv_subscribe_agree </td>
+                <td>
+                                            수정자
+                     </td>
+                <td> sa_modified_by </td>
+                <td> BIGINT </td>
+                <td>
+                     </td>
+                <td>  </td>
+                <td>  NULL  </td>
+                <td>  </td>
+                <td >  </td>
+                <td> 수정자 </td>
+            </tr>
+                                
+            <tr class="column-header">
+                            <td> user </td>
+                <td> 약관 동의 </td>
+                <td> nv_term_agree </td>
+                <td>
+                                            계정아이디
+                     </td>
+                <td> ta_acnt_id </td>
+                <td> BIGINT </td>
+                <td>
+                                            PK
+                     </td>
+                <td>  </td>
+                <td>  </td>
+                <td>  </td>
+                <td >  </td>
+                <td> 계정아이디 </td>
+            </tr>
+                                <tr>
+                            <td> user </td>
+                <td> 약관 동의 </td>
+                <td> nv_term_agree </td>
+                <td>
+                                            약관코드
+                     </td>
+                <td> ta_term_code </td>
+                <td> VARCHAR(20) </td>
+                <td>
+                                            PK
+                     </td>
+                <td>  </td>
+                <td>  </td>
+                <td>  </td>
+                <td >  </td>
+                <td> 약관코드 </td>
+            </tr>
+                                <tr>
+                            <td> user </td>
+                <td> 약관 동의 </td>
+                <td> nv_term_agree </td>
+                <td>
+                                            동의여부
+                     </td>
+                <td> ta_agree </td>
+                <td> BIT </td>
+                <td>
+                     </td>
+                <td>  </td>
+                <td>  NULL  </td>
+                <td>  </td>
+                <td >  </td>
+                <td> 동의여부 </td>
+            </tr>
+                                <tr>
+                            <td> user </td>
+                <td> 약관 동의 </td>
+                <td> nv_term_agree </td>
+                <td>
+                                            수정일시
+                     </td>
+                <td> ta_modified_dt </td>
+                <td> TIMESTAMP </td>
+                <td>
+                     </td>
+                <td>  </td>
+                <td>  NULL  </td>
+                <td>  </td>
+                <td >  </td>
+                <td> 수정일시 </td>
+            </tr>
+                                <tr>
+                            <td> user </td>
+                <td> 약관 동의 </td>
+                <td> nv_term_agree </td>
+                <td>
+                                            수정자
+                     </td>
+                <td> ta_modified_by </td>
+                <td> BIGINT </td>
+                <td>
+                     </td>
+                <td>  </td>
+                <td>  NULL  </td>
+                <td>  </td>
+                <td >  </td>
+                <td> 수정자 </td>
+            </tr>
+                                
+            <tr class="column-header">
+                            <td> user </td>
+                <td> 리멤버미 토큰 </td>
+                <td> nv_persistent_token </td>
+                <td>
+                                            아이디
+                     </td>
+                <td> pt_id </td>
+                <td> BIGINT </td>
+                <td>
+                                            PK
+                     </td>
+                <td> U </td>
+                <td>  </td>
+                <td>  </td>
+                <td >  </td>
+                <td> 아이디 </td>
+            </tr>
+                                <tr>
+                            <td> user </td>
+                <td> 리멤버미 토큰 </td>
+                <td> nv_persistent_token </td>
+                <td>
+                                            시리즈
+                     </td>
+                <td> pt_series </td>
+                <td> VARCHAR(20) </td>
+                <td>
+                     </td>
+                <td>  </td>
+                <td>  NULL  </td>
+                <td>  </td>
+                <td >  </td>
+                <td> 시리즈 </td>
+            </tr>
+                                <tr>
+                            <td> user </td>
+                <td> 리멤버미 토큰 </td>
+                <td> nv_persistent_token </td>
+                <td>
+                                            토큰값
+                     </td>
+                <td> pt_token_value </td>
+                <td> VARCHAR(20) </td>
+                <td>
+                     </td>
+                <td>  </td>
+                <td>  NULL  </td>
+                <td>  </td>
+                <td >  </td>
+                <td> 토큰값 </td>
+            </tr>
+                                <tr>
+                            <td> user </td>
+                <td> 리멤버미 토큰 </td>
+                <td> nv_persistent_token </td>
+                <td>
+                                            토큰일자
+                     </td>
+                <td> pt_token_date </td>
+                <td> DATE </td>
+                <td>
+                     </td>
+                <td>  </td>
+                <td>  NULL  </td>
+                <td>  </td>
+                <td >  </td>
+                <td> 토큰일자 </td>
+            </tr>
+                                <tr>
+                            <td> user </td>
+                <td> 리멤버미 토큰 </td>
+                <td> nv_persistent_token </td>
+                <td>
+                                            아이피
+                     </td>
+                <td> pt_ip_address </td>
+                <td> VARCHAR(39) </td>
+                <td>
+                     </td>
+                <td>  </td>
+                <td>  NULL  </td>
+                <td>  </td>
+                <td >  </td>
+                <td> 아이피 </td>
+            </tr>
+                                <tr>
+                            <td> user </td>
+                <td> 리멤버미 토큰 </td>
+                <td> nv_persistent_token </td>
+                <td>
+                                            유저에이전트
+                     </td>
+                <td> pt_user_agent </td>
+                <td> VARCHAR(255) </td>
+                <td>
+                     </td>
+                <td>  </td>
+                <td>  NULL  </td>
+                <td>  </td>
+                <td >  </td>
+                <td> 유저에이전트 </td>
+            </tr>
+                                <tr>
+                            <td> user </td>
+                <td> 리멤버미 토큰 </td>
+                <td> nv_persistent_token </td>
+                <td>
+                                            사용자아이디
+                     </td>
+                <td> pt_user_key </td>
+                <td> BIGINT </td>
+                <td>
+                     </td>
+                <td>  </td>
+                <td>  NULL  </td>
+                <td>  </td>
+                <td >  </td>
+                <td> 사용자아이디 </td>
+            </tr>
+                </tbody>
+</table>
+</body>
+</html>
